@@ -6,436 +6,71 @@
 <title>Lazy Realism FX | Environment Effects for Blender</title>
 <meta name="description" content="Bring Blender environments to life with weather, wind, particles and surface detail. Explore Lazy Realism FX.">
 <style>
-:root{
-  --ink:#17212b;
-  --muted:#687887;
-  --line:rgba(255,255,255,.8);
-  --accent:#007aff;
-  --display:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --mono:var(--display)}
-  *{
-    box-sizing:border-box}
-    html{
-      scroll-behavior:smooth}
-      body{
-        margin:0;
-        color:var(--ink);
-        font-family:var(--display);
-        -webkit-font-smoothing:antialiased;
-        background:radial-gradient(ellipse at 8% 4%,#dcecff 0,transparent 34%),radial-gradient(ellipse at 95% 26%,#e5e0ff 0,transparent 36%),linear-gradient(160deg,#f7f9fc,#edf2f8 55%,#f8faff)}
-        a{
-          color:inherit}
-          button{
-            font:inherit}
-            .page{
-              max-width:1080px;
-              padding:24px;
-              margin:auto}
-              .system-bar{
-                display:flex;
-                justify-content:space-between;
-                gap:16px;
-                align-items:center;
-                padding:18px 24px;
-                border-radius:24px;
-                background:rgba(255,255,255,.78);
-                border:1px solid #fff;
-                box-shadow:0 6px 24px #254c7a08}
-                .system-name{
-                  font-size:14px;
-                  font-weight:650;
-                  letter-spacing:-.02em}
-                  .system-code{
-                    font-size:11px;
-                    color:var(--muted)}
-                    .locator{
-                      display:flex;
-                      justify-content:space-between;
-                      padding:24px 8px;
-                      font-size:10px;
-                      letter-spacing:.12em;
-                      color:var(--muted)}
-                      .hero-copy{
-                        padding:56px 48px;
-                        border:1px solid #fff;
-                        border-radius:36px;
-                        background:linear-gradient(145deg,#ffffffdb,#ffffff75);
-                        box-shadow:inset 0 1px 0 #fff,0 16px 48px #254c7a0a}
-                        .hero-header{
-                          display:flex;
-                          justify-content:space-between;
-                          gap:20px}
-                          .hero-kicker{
-                            color:var(--accent);
-                            font-size:13px;
-                            font-weight:600;
-                            margin-bottom:24px}
-                            h1{
-                              font-size:clamp(50px,9vw,96px);
-                              font-weight:650;
-                              letter-spacing:-.075em;
-                              line-height:.98;
-                              margin:0 0 28px}
-                              h2{
-                                font-size:clamp(30px,4.6vw,48px);
-                                font-weight:600;
-                                letter-spacing:-.055em;
-                                line-height:1.08;
-                                margin:0}
-                                h3{
-                                  font-size:23px;
-                                  font-weight:600;
-                                  letter-spacing:-.035em;
-                                  margin:0 0 12px}
-                                  .hero-id{
-                                    font-size:10px;
-                                    line-height:1.8;
-                                    text-align:right;
-                                    color:var(--muted)}
-                                    .hero-lead{
-                                      max-width:680px;
-                                      font-size:18px;
-                                      line-height:1.65;
-                                      color:#536273;
-                                      margin:0}
-                                      .hero-lead strong{
-                                        color:var(--ink);
-                                        font-weight:600}
-                                        .actions{
-                                          display:flex;
-                                          gap:12px;
-                                          margin-top:28px;
-                                          flex-wrap:wrap}
-                                          .ui-button{
-                                            display:inline-flex;
-                                            justify-content:center;
-                                            align-items:center;
-                                            padding:14px 23px;
-                                            min-height:46px;
-                                            text-decoration:none;
-                                            border-radius:100px;
-                                            border:1px solid #dbe5ef;
-                                            background:#ffffffb3;
-                                            font-size:13px;
-                                            font-weight:600}
-                                            .ui-button.primary{
-                                              background:var(--accent);
-                                              border-color:var(--accent);
-                                              color:white}
-                                              .ui-button:hover{
-                                                box-shadow:0 4px 16px #007aff1c}
-                                                .chips{
-                                                  display:flex;
-                                                  gap:8px;
-                                                  flex-wrap:wrap;
-                                                  margin-top:28px}
-                                                  .chips span{
-                                                    padding:8px 13px;
-                                                    border:1px solid #ffffffdb;
-                                                    border-radius:100px;
-                                                    background:#ffffff8a;
-                                                    font-size:11px;
-                                                    color:var(--muted)}
-                                                    .nav{
-                                                      display:flex;
-                                                      justify-content:center;
-                                                      gap:24px;
-                                                      flex-wrap:wrap;
-                                                      margin:28px 0 0;
-                                                      font-size:12px}
-                                                      .nav a{
-                                                        text-decoration:none;
-                                                        color:var(--muted)}
-                                                        .nav a:hover{
-                                                          color:var(--accent)}
-                                                          .section{
-                                                            margin-top:72px;
-                                                            scroll-margin-top:24px;
-                                                            content-visibility:auto;
-                                                            contain-intrinsic-size:auto 550px}
-                                                            .section-heading{
-                                                              display:block;
-                                                              margin-bottom:24px;
-                                                              padding:0 8px}
-                                                              .section-index{
-                                                                font-size:10px;
-                                                                letter-spacing:.12em;
-                                                                color:var(--accent);
-                                                                margin-bottom:14px}
-                                                                .section-title-wrap p{
-                                                                  max-width:700px;
-                                                                  font-size:15px;
-                                                                  line-height:1.6;
-                                                                  color:var(--muted);
-                                                                  margin:14px 0 0}
-                                                                  .panel-grid{
-                                                                    display:grid;
-                                                                    grid-template-columns:.85fr 1.15fr;
-                                                                    gap:16px}
-                                                                    .panel,.module-card,.step,.feature-row,.faq{
-                                                                      border:1px solid #fff;
-                                                                      border-radius:26px;
-                                                                      background:linear-gradient(140deg,#ffffffd9,#ffffff8a);
-                                                                      box-shadow:inset 0 1px 0 #fff,0 8px 28px #254c7a06}
-                                                                      .panel-inner{
-                                                                        padding:32px}
-                                                                        .panel p,.module-card p,.step p,.feature-copy,details p{
-                                                                          font-size:14px;
-                                                                          line-height:1.75;
-                                                                          color:#607083;
-                                                                          margin:0 0 14px}
-                                                                          .system-list{
-                                                                            list-style:none;
-                                                                            padding:0;
-                                                                            margin:22px 0 0}
-                                                                            .system-list li{
-                                                                              font-size:13px;
-                                                                              padding:12px 0;
-                                                                              border-top:1px solid #e0e7ef;
-                                                                              color:#536273}
-                                                                              .system-list li:before{
-                                                                                content:'✓';
-                                                                                color:var(--accent);
-                                                                                margin-right:10px}
-                                                                                .module-grid{
-                                                                                  display:grid;
-                                                                                  grid-template-columns:repeat(3,1fr);
-                                                                                  gap:14px}
-                                                                                  .module-card{
-                                                                                    padding:28px;
-                                                                                    min-height:206px}
-                                                                                    .module-tag{
-                                                                                      color:var(--accent);
-                                                                                      font-size:10px;
-                                                                                      letter-spacing:.04em;
-                                                                                      margin-bottom:24px}
-                                                                                      .module-card p{
-                                                                                        font-size:13px;
-                                                                                        margin:0}
-                                                                                        .media-slot{
-                                                                                          position:relative;
-                                                                                          display:grid;
-                                                                                          place-items:center;
-                                                                                          text-align:center;
-                                                                                          min-height:300px;
-                                                                                          padding:40px 24px;
-                                                                                          overflow:hidden;
-                                                                                          border:1px solid #fff;
-                                                                                          border-radius:28px;
-                                                                                          background:radial-gradient(ellipse at 25% 20%,#ffffffeb,transparent 60%),linear-gradient(130deg,#dceaff,#e6e4fa 65%,#e4f3f5);
-                                                                                          box-shadow:inset 0 1px 0 #fff,0 12px 36px #254c7a08}
-                                                                                          .media-slot:before{
-                                                                                            content:attr(data-slot);
-                                                                                            position:absolute;
-                                                                                            top:22px;
-                                                                                            left:24px;
-                                                                                            font-size:10px;
-                                                                                            letter-spacing:.08em;
-                                                                                            color:#7386a0}
-                                                                                            .media-slot:after{
-                                                                                              content:'LAZY 3D';
-                                                                                              position:absolute;
-                                                                                              bottom:20px;
-                                                                                              right:24px;
-                                                                                              font-size:9px;
-                                                                                              letter-spacing:.12em;
-                                                                                              color:#8496ac}
-                                                                                              .slot-mark{
-                                                                                                font-size:60px;
-                                                                                                font-weight:300;
-                                                                                                letter-spacing:-.06em;
-                                                                                                color:#a3bbd8;
-                                                                                                line-height:1;
-                                                                                                margin-bottom:20px}
-                                                                                                .media-slot strong{
-                                                                                                  display:block;
-                                                                                                  font-size:30px;
-                                                                                                  font-weight:600;
-                                                                                                  letter-spacing:-.045em}
-                                                                                                  .media-slot p{
-                                                                                                    font-size:12px;
-                                                                                                    line-height:1.8;
-                                                                                                    max-width:400px;
-                                                                                                    color:#74859b;
-                                                                                                    margin:14px auto 0}
-                                                                                                    .hero-visual{
-                                                                                                      min-height:400px;
-                                                                                                      margin-top:16px;
-                                                                                                      border-radius:36px}
-                                                                                                      .gallery{
-                                                                                                        display:grid;
-                                                                                                        grid-template-columns:1fr 1fr;
-                                                                                                        gap:16px}
-                                                                                                        .gallery .media-slot{
-                                                                                                          min-height:285px}
-                                                                                                          .comparison{
-                                                                                                            display:grid;
-                                                                                                            grid-template-columns:1fr 1fr;
-                                                                                                            gap:16px}
-                                                                                                            .caption{
-                                                                                                              text-align:center;
-                                                                                                              color:var(--muted);
-                                                                                                              font-size:12px;
-                                                                                                              padding:18px 10px}
-                                                                                                              .steps{
-                                                                                                                display:grid;
-                                                                                                                grid-template-columns:repeat(3,1fr);
-                                                                                                                gap:14px}
-                                                                                                                .step{
-                                                                                                                  padding:28px}
-                                                                                                                  .step b{
-                                                                                                                    display:block;
-                                                                                                                    font-size:44px;
-                                                                                                                    font-weight:300;
-                                                                                                                    color:#83b6f6;
-                                                                                                                    letter-spacing:-.05em;
-                                                                                                                    margin-bottom:24px}
-                                                                                                                    .step p{
-                                                                                                                      font-size:13px;
-                                                                                                                      margin:0}
-                                                                                                                      .feature-stack{
-                                                                                                                        display:grid;
-                                                                                                                        gap:12px}
-                                                                                                                        .feature-row{
-                                                                                                                          display:grid;
-                                                                                                                          grid-template-columns:230px 1fr 22px;
-                                                                                                                          align-items:center;
-                                                                                                                          padding:26px 30px;
-                                                                                                                          gap:20px}
-                                                                                                                          .feature-name{
-                                                                                                                            font-size:20px;
-                                                                                                                            font-weight:600;
-                                                                                                                            letter-spacing:-.03em}
-                                                                                                                            .feature-copy{
-                                                                                                                              margin:0}
-                                                                                                                              .feature-code{
-                                                                                                                                color:var(--accent)}
-                                                                                                                                .feature-code:after{
-                                                                                                                                  content:'↗'}
-                                                                                                                                  .facts{
-                                                                                                                                    display:grid;
-                                                                                                                                    grid-template-columns:1fr 1fr;
-                                                                                                                                    gap:14px}
-                                                                                                                                    .faq{
-                                                                                                                                      overflow:hidden}
-                                                                                                                                      details{
-                                                                                                                                        padding:23px 28px;
-                                                                                                                                        border-bottom:1px solid #dfe7f0}
-                                                                                                                                        details:last-child{
-                                                                                                                                          border-bottom:0}
-                                                                                                                                          summary{
-                                                                                                                                            font-size:16px;
-                                                                                                                                            font-weight:600;
-                                                                                                                                            cursor:pointer}
-                                                                                                                                            details p{
-                                                                                                                                              margin:16px 0 0;
-                                                                                                                                              max-width:850px}
-                                                                                                                                              .closing{
-                                                                                                                                                margin-top:64px;
-                                                                                                                                                border-radius:36px;
-                                                                                                                                                padding:48px;
-                                                                                                                                                background:linear-gradient(135deg,#eef6ffea,#ffffffaa);
-                                                                                                                                                border:1px solid #fff;
-                                                                                                                                                box-shadow:inset 0 1px 0 #fff,0 12px 36px #254c7a08}
-                                                                                                                                                .closing p{
-                                                                                                                                                  max-width:650px;
-                                                                                                                                                  font-size:16px;
-                                                                                                                                                  line-height:1.7;
-                                                                                                                                                  color:var(--muted);
-                                                                                                                                                  margin:22px 0}
-                                                                                                                                                  .closing .ui-button{
-                                                                                                                                                    color:white;
-                                                                                                                                                    background:var(--accent);
-                                                                                                                                                    border-color:var(--accent)}
-                                                                                                                                                    footer{
-                                                                                                                                                      display:flex;
-                                                                                                                                                      justify-content:space-between;
-                                                                                                                                                      gap:20px;
-                                                                                                                                                      padding:28px 8px;
-                                                                                                                                                      margin-top:16px;
-                                                                                                                                                      font-size:10px;
-                                                                                                                                                      color:var(--muted)}
-                                                                                                                                                      a:focus-visible,summary:focus-visible{
-                                                                                                                                                        outline:3px solid #007aff;
-                                                                                                                                                        outline-offset:5px}
-                                                                                                                                                        /* Blur stays confined to one small header. The rest uses inexpensive gradients. */
-                                                                                                                                                        @supports(backdrop-filter:blur(8px)){
-                                                                                                                                                          .system-bar{
-                                                                                                                                                            background:#ffffff9c;
-                                                                                                                                                            backdrop-filter:blur(8px)}
-                                                                                                                                                          }
-                                                                                                                                                          @media(max-width:760px){
-                                                                                                                                                            .page{
-                                                                                                                                                              padding:16px}
-                                                                                                                                                              .hero-copy{
-                                                                                                                                                                padding:36px 28px}
-                                                                                                                                                                .hero-id{
-                                                                                                                                                                  display:none}
-                                                                                                                                                                  .hero-lead{
-                                                                                                                                                                    font-size:16px}
-                                                                                                                                                                    .system-code{
-                                                                                                                                                                      display:none}
-                                                                                                                                                                      .locator-track{
-                                                                                                                                                                        display:none}
-                                                                                                                                                                        .panel-grid,.facts,.steps{
-                                                                                                                                                                          grid-template-columns:1fr}
-                                                                                                                                                                          .module-grid{
-                                                                                                                                                                            grid-template-columns:repeat(2,1fr)}
-                                                                                                                                                                            .section{
-                                                                                                                                                                              margin-top:48px}
-                                                                                                                                                                              .nav{
-                                                                                                                                                                                gap:16px}
-                                                                                                                                                                                .feature-row{
-                                                                                                                                                                                  grid-template-columns:1fr 22px;
-                                                                                                                                                                                  padding:24px;
-                                                                                                                                                                                  gap:10px}
-                                                                                                                                                                                  .feature-copy{
-                                                                                                                                                                                    grid-column:1}
-                                                                                                                                                                                    .feature-code{
-                                                                                                                                                                                      grid-column:2;
-                                                                                                                                                                                      grid-row:1/3}
-                                                                                                                                                                                      .closing{
-                                                                                                                                                                                        padding:32px}
-                                                                                                                                                                                        .hero-visual{
-                                                                                                                                                                                          min-height:310px}
-                                                                                                                                                                                        }
-                                                                                                                                                                                        @media(max-width:460px){
-                                                                                                                                                                                          .page{
-                                                                                                                                                                                            padding:10px}
-                                                                                                                                                                                            .hero-copy{
-                                                                                                                                                                                              padding:32px 22px;
-                                                                                                                                                                                              border-radius:28px}
-                                                                                                                                                                                              .module-grid,.gallery,.comparison{
-                                                                                                                                                                                                grid-template-columns:1fr}
-                                                                                                                                                                                                .media-slot strong{
-                                                                                                                                                                                                  font-size:26px}
-                                                                                                                                                                                                  .hero-kicker{
-                                                                                                                                                                                                    font-size:12px}
-                                                                                                                                                                                                    .hero-visual{
-                                                                                                                                                                                                      min-height:300px}
-                                                                                                                                                                                                      .ui-button{
-                                                                                                                                                                                                        padding:13px 18px;
-                                                                                                                                                                                                        font-size:12px}
-                                                                                                                                                                                                        .hero-lead{
-                                                                                                                                                                                                          font-size:15px}
-                                                                                                                                                                                                          .section-heading{
-                                                                                                                                                                                                            padding:0 4px}
-                                                                                                                                                                                                            .system-bar{
-                                                                                                                                                                                                              padding:16px 18px}
-                                                                                                                                                                                                              .closing{
-                                                                                                                                                                                                                padding:28px}
-                                                                                                                                                                                                              }
-                                                                                                                                                                                                              @media(prefers-reduced-motion:reduce){
-                                                                                                                                                                                                                html{
-                                                                                                                                                                                                                  scroll-behavior:auto}
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                                @media(prefers-reduced-transparency:reduce){
-                                                                                                                                                                                                                  .system-bar{
-                                                                                                                                                                                                                    backdrop-filter:none;
-                                                                                                                                                                                                                    background:#fff}
-                                                                                                                                                                                                                    .hero-copy,.panel,.module-card,.step,.feature-row,.faq{
-                                                                                                                                                                                                                      background:#fff}
-                                                                                                                                                                                                                    }
+
+:root { --ink:#171717; --muted:#666; --accent:#000; --display:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); font-family:var(--display); background:transparent; -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+.page { max-width:1080px; padding:24px; margin:auto; }
+.system-bar { display:flex; justify-content:space-between; padding:18px 24px; font-size:13px; }
+.system-code,.locator,.hero-id { color:var(--muted); font-size:10px; }
+.locator { display:flex; justify-content:space-between; padding:24px 8px; letter-spacing:.1em; }
+.hero-copy,.closing { padding:48px; }
+.hero-header { display:flex; justify-content:space-between; gap:20px; }
+.hero-kicker { margin-bottom:24px; font-size:13px; font-weight:600; }
+h1 { font-size:clamp(50px,9vw,96px); font-weight:650; letter-spacing:-.075em; line-height:.98; margin:0 0 28px; }
+h2 { font-size:clamp(30px,4.6vw,48px); font-weight:600; letter-spacing:-.055em; line-height:1.08; margin:0; }
+h3 { font-size:23px; font-weight:600; letter-spacing:-.035em; margin:0 0 12px; }
+.hero-lead { max-width:680px; font-size:18px; line-height:1.65; color:#555; }
+.hero-id { text-align:right; line-height:1.8; }
+.system-bar,.hero-copy,.panel,.module-card,.step,.feature-row,.faq,.closing { border:1px solid rgba(0,0,0,.09); border-radius:10px; background:rgba(255,255,255,.72); box-shadow:inset 0 1px 0 #fff,0 8px 28px #00000006; }
+.actions,.chips,.nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.ui-button { display:inline-flex; padding:14px 23px; border:1px solid #ddd; border-radius:10px; background:rgba(255,255,255,.8); text-decoration:none; font-size:13px; font-weight:600; }
+.ui-button.primary,.closing .ui-button { color:white; background:#000; border-color:#000; }
+.chips span { padding:8px 13px; border:1px solid #ddd; border-radius:10px; font-size:11px; color:#666; }
+.nav { justify-content:center; gap:24px; font-size:12px; }
+.nav a { text-decoration:none; }
+.section { margin-top:64px; scroll-margin-top:24px; content-visibility:auto; contain-intrinsic-size:auto 550px; }
+.section-heading { margin-bottom:24px; padding:0 8px; }
+.section-index,.module-tag { font-size:10px; letter-spacing:.08em; margin-bottom:14px; color:#000; }
+.section-title-wrap p { font-size:15px; color:#666; line-height:1.6; }
+.panel-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:16px; }
+.panel-inner,.module-card,.step { padding:28px; }
+.panel p,.module-card p,.step p,.feature-copy,details p { font-size:14px; line-height:1.75; color:#666; }
+.system-list { list-style:none; padding:0; }
+.system-list li { padding:12px 0; border-top:1px solid #ddd; font-size:13px; }
+.system-list li:before { content:'✓'; margin-right:10px; color:#000; }
+.module-grid,.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.module-card { min-height:206px; }
+.module-tag { margin-bottom:24px; }
+.media-slot { position:relative; display:grid; place-items:center; text-align:center; min-height:300px; padding:40px 24px; border:1px solid #ddd; border-radius:10px; background:rgba(255,255,255,.45); box-shadow:inset 0 1px 0 #fff; }
+.media-slot:before { content:attr(data-slot); position:absolute; top:22px; left:24px; font-size:10px; color:#777; }
+.media-slot:after { content:'LAZY 3D'; position:absolute; bottom:20px; right:24px; font-size:9px; color:#888; }
+.slot-mark { font-size:60px; font-weight:300; color:#000; line-height:1; margin-bottom:20px; }
+.media-slot strong { display:block; font-size:30px; font-weight:600; letter-spacing:-.045em; }
+.media-slot p { max-width:400px; font-size:12px; line-height:1.8; color:#777; }
+.hero-visual { min-height:400px; margin-top:16px; }
+.gallery,.comparison,.facts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.caption { text-align:center; font-size:12px; padding:18px; color:#666; }
+.step b { display:block; font-size:44px; font-weight:300; color:#000; margin-bottom:24px; }
+.feature-stack { display:grid; gap:12px; }
+.feature-row { display:grid; grid-template-columns:230px 1fr 22px; align-items:center; padding:26px 30px; gap:20px; }
+.feature-name { font-size:20px; font-weight:600; }
+.feature-code:after { content:'↗'; }
+.faq { overflow:hidden; }
+details { padding:23px 28px; border-bottom:1px solid #ddd; }
+details:last-child { border-bottom:0; }
+summary { font-size:16px; font-weight:600; cursor:pointer; }
+.closing { margin-top:64px; }
+.closing p { font-size:16px; line-height:1.7; color:#666; }
+footer { display:flex; justify-content:space-between; padding:28px 8px; font-size:10px; color:#666; }
+a:focus-visible,summary:focus-visible { outline:3px solid #000; outline-offset:5px; }
+@supports(backdrop-filter:blur(8px)) { .system-bar { backdrop-filter:blur(8px); } }
+@media(max-width:760px) { .page { padding:16px; } .hero-copy,.closing { padding:32px 24px; } .hero-id,.system-code,.locator-track { display:none; } .hero-lead { font-size:16px; } .panel-grid,.facts,.steps { grid-template-columns:1fr; } .module-grid { grid-template-columns:repeat(2,1fr); } .feature-row { grid-template-columns:1fr; gap:10px; } .section { margin-top:48px; } }
+@media(max-width:460px) { .page { padding:10px; } .module-grid,.gallery,.comparison { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .media-slot strong { font-size:26px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media(prefers-reduced-transparency:reduce) { .system-bar { backdrop-filter:none; } }
 </style>
 </head>
 <body>
