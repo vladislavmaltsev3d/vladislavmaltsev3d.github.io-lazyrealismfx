@@ -19,6 +19,16 @@
 @media(max-width:460px){.page{padding:10px}.hero-copy,.closing{padding:24px 18px}.hero-kicker{font-size:11px}.system-bar{padding:15px;font-size:10px}.locator{padding:20px 2px}.hero-lead{font-size:15px}.ui-button{padding:12px 16px;font-size:12px}.chips span{font-size:10px;padding:6px 9px}.nav{gap:12px;font-size:11px}.media-figure figcaption{flex-direction:column;gap:6px}.media-type{display:none}.section-heading>p{font-size:15px}.workflow-steps{grid-template-columns:1fr}.feature-note,.more-card{padding:22px}.module-heading p{font-size:14px}.pending-media .eyebrow{font-size:8px;margin-bottom:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ui-button{transition:none}}@media(prefers-reduced-transparency:reduce){.system-bar{backdrop-filter:none}.system-bar,.hero-copy,.closing,.more-card,.feature-note,.pending-media{background:#fff}}
 
+
+/* Supplementary media: full source proportions, captions outside the frame. */
+.square-scene{width:100%}
+.compact-preview{width:100%;max-width:700px;margin-left:auto;margin-right:auto}
+.compact-square{width:100%;max-width:500px;margin-left:auto;margin-right:auto}
+.supplemental-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.supplemental-grid>.media-figure{width:100%;min-width:0}
+.shader-overview{margin-bottom:40px}
+.more-card .media-figure{margin-top:22px}
+@media(max-width:760px){.supplemental-grid{grid-template-columns:minmax(0,1fr);gap:26px}.shader-overview{margin-bottom:30px}}
 </style>
 </head>
 <body>
@@ -63,17 +73,26 @@
 </article>
 <article class="module">
   <div class="module-heading"><h3>Dust &amp; Ashes</h3><p>Add floating particles that catch the light and give the air a sense of depth.</p></div>
-  <figure class="media-figure ">
+  <div class="media-stack"><figure class="media-figure ">
   <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching warm light in front of a circular vent." loading="lazy" decoding="async"></div>
   <figcaption><span><strong>Flying Dust</strong><span class="caption-detail">Motion and atmosphere, right in the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure>
-</article>
+<figure class="media-figure compact-square">
+      <div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/346b61afe5f4ec7b80dbc7a8b2ef776b.gif" width="500" height="500" alt="Ash particles moving through the scene." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Ashes</strong><span class="caption-detail">Another layer of floating particles.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></div></article>
 <article class="module">
   <div class="module-heading"><h3>Birds &amp; Insects</h3><p>Give the background a life of its own, with movement that makes the sky feel inhabited.</p></div>
   <div class="media-stack"><figure class="media-figure square-scene">
   <div class="media-frame" style="--ratio:1000/1000"><img src="https://assets.superhivemarket.com/cache/7bf5ed4030583c93d2d22c89b501f815.gif" width="1000" height="1000" alt="Birds flying above an autumn forest and a wooden cabin." loading="lazy" decoding="async"></div>
   <figcaption><span><strong>Birds</strong><span class="caption-detail">Life above the tree line.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure><figure class="media-figure ">
+</figure><div class="supplemental-grid"><figure class="media-figure ">
+      <div class="media-frame" style="--ratio:700/350"><img src="https://assets.superhivemarket.com/cache/00af8a6fb6319b9925f72f72b8db652a.gif" width="700" height="350" alt="Crawling movement among leaves on the ground." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Crawling</strong><span class="caption-detail">Movement close to the ground.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure><figure class="media-figure ">
+      <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/966e0faaaeae2bf00cb0681d36e15b8c.gif" width="1000" height="500" alt="A swarm in motion beside foliage and a stone arch." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Swarm</strong><span class="caption-detail">Small movements bring the air to life.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></div><figure class="media-figure ">
   <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/4ee8d0c1f1f0680496271a667e6708c9.gif" width="1000" height="500" alt="Blender viewport showing birds above a cabin and the Lazy Realism FX interface." loading="lazy" decoding="async"></div>
   <figcaption><span><strong>Birds · Workflow</strong><span class="caption-detail">A look at the effect inside Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure><figure class="media-figure">
@@ -113,12 +132,18 @@
   <figcaption><span><strong>3D Puddles</strong><span class="caption-detail">Procedural puddles with real volume.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure><p class="intro-caption">Each puddle is a <strong>three-dimensional mesh</strong>, shaped procedurally to fill your mesh.</p>
 </article>
-<div class="more-card"><h3>And many more.</h3><p>Keep building the scene with more procedural effects from the library.</p><ul class="effect-list"><li>Rain</li><li>Snow coverage</li><li>Wind</li><li>Tree movement</li><li>Spider webs</li><li>Foam &amp; slime</li><li>Droplets</li><li>Sand</li><li>Grass</li><li>Branches</li><li>Collisions</li></ul></div>
+<article class="module" id="simulated-droplets"><div class="module-heading"><h3>Simulated Droplets</h3><p>Bring water droplets into motion and add another layer of detail to your scene.</p></div><figure class="media-figure ">
+      <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/fc709e058e1fff9a381e53177225cbce.gif" width="1000" height="300" alt="Simulated water droplets moving through the scene." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Simulated Droplets</strong><span class="caption-detail">Water detail in motion.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></article><div class="more-card"><h3>And many more.</h3><p>Keep building the scene with more procedural effects from the library.</p><ul class="effect-list"><li>Rain</li><li>Snow coverage</li><li>Wind</li><li>Tree movement</li><li>Spider webs</li><li>Foam &amp; slime</li><li>Droplets</li><li>Sand</li><li>Grass</li><li>Branches</li><li>Collisions</li></ul></div>
   </section>
 
   <section class="section" id="shaders">
     <div class="section-heading library-heading"><div class="eyebrow">WHAT'S INSIDE / MATERIALS</div><h2>One-click shaders.</h2><p>The finishing layer: dirt, growth, residue and weathering. Apply a shader, adjust its look and bring new texture to your surfaces.</p></div>
-<article class="module">
+<figure class="media-figure shader-overview">
+      <div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/831a8cd15561f8af6af249065cc0b139.jpg" width="2000" height="1000" alt="Three sculptures showing Pro Moss, Pro Dust and Moss shaders." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Pro Shaders</strong><span class="caption-detail">Pro Moss · Pro Dust · Moss</span></span><span class="media-type">SHADER SHOWCASE</span></figcaption>
+    </figure><article class="module">
   <div class="module-heading"><h3>Ground Dirt</h3><p>Bring natural dirt and variation to the ground, so it feels connected to the rest of your scene.</p></div>
   <figure class="media-figure ">
   <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Blender viewport showing ground dirt and scattered surface details beside a wall." loading="lazy" decoding="async"></div>
@@ -127,22 +152,33 @@
 </article>
 <article class="module">
   <div class="module-heading"><h3>Moss</h3><p>Add natural growth that gives your surfaces a sense of age and place.</p></div>
-  <figure class="media-figure ">
+  <div class="media-stack"><figure class="media-figure ">
   <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Green moss covering a weathered surface beside fallen leaves." loading="lazy" decoding="async"></div>
   <figcaption><span><strong>Moss</strong><span class="caption-detail">A closer look at growth across the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure>
-</article>
+<figure class="media-figure compact-preview">
+      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/7a64824962528edcad98b74acc6c9208.gif" width="700" height="420" alt="Blender workflow demonstrating the Pro Moss shader." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Pro Moss</strong><span class="caption-detail">Explore the Pro Moss workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure><figure class="media-figure compact-preview">
+      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/39b87dc46d06631100edf27ffcc3208e.gif" width="700" height="420" alt="Blender workflow demonstrating moss streaks on a sculpture." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Moss Leaks</strong><span class="caption-detail">A different look at moss on a surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></div></article>
 <article class="module" id="snow-shader">
   <div class="module-heading"><h3>Snow</h3><p>Finish a winter scene with a layer of snow on your materials.</p></div>
-  <div class="feature-note"><strong>Geometry and materials, together.</strong> Combine the Snow shader with QX Snow to carry a winter look from the shape of your scene to its surfaces.</div>
-</article>
+  <figure class="media-figure ">
+      <div class="media-frame" style="--ratio:1000/600"><img src="https://assets.superhivemarket.com/cache/df9c57a29c63fd6a6aea4b60d3174695.gif" width="1000" height="600" alt="Blender viewport showing the snow shader on rocky ground and a fallen branch." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Snow Shader</strong><span class="caption-detail">A winter surface, demonstrated in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></article>
 <article class="module">
   <div class="module-heading"><h3>Dust</h3><p>Bring a settled, lived-in quality to objects with a layer of surface dust.</p></div>
-  <figure class="media-figure ">
+  <div class="media-stack"><figure class="media-figure ">
   <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/6a1a16463f0ef58bb2bad0053aefdcd4.gif" width="1000" height="500" alt="Blender viewport showing dust on a vintage television and lantern." loading="lazy" decoding="async"></div>
   <figcaption><span><strong>Dust Shader · Workflow</strong><span class="caption-detail">From the FX library to the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure>
-</article>
+<figure class="media-figure compact-preview">
+      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/6f5fbbca751c0b086e1c1643dc900af2.gif" width="700" height="420" alt="Blender workflow demonstrating the Pro Dust shader." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Pro Dust</strong><span class="caption-detail">Explore the Pro Dust workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></div></article>
 <article class="module" id="tire-marks">
   <div class="module-heading"><h3>Tire Marks</h3><p>Add the traces of traffic to roads and ground surfaces.</p></div>
   <figure class="media-figure ">
@@ -150,11 +186,17 @@
   <figcaption><span><strong>Tire Shader · Workflow</strong><span class="caption-detail">Surface marks in the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
 </figure>
 </article>
-<article class="module">
+<article class="module" id="quick-puddles"><div class="module-heading"><h3>Quick Puddles</h3><p>Add puddle reflections and wet detail to your surfaces.</p></div><figure class="media-figure ">
+      <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/8c1002468860d8dba5facc7587c76acd.gif" width="1000" height="300" alt="Reflective puddles across a paved surface." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>Quick Puddles</strong><span class="caption-detail">Reflected detail across a wet surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+    </figure></article><article class="module">
   <div class="module-heading"><h3>Oil Puddles &amp; Oil Stains</h3><p>Add oily residue and iridescent surface detail to your environment.</p></div>
   <div class="feature-note"><strong>A small detail with a visible impact.</strong> See Oil Stains in the <a href="#effects-preview">finished scene above ↑</a>.</div>
 </article>
-<div class="more-card"><h3>And many more.</h3><p>Explore additional shaders for weathering, residue, wetness and environmental detail.</p><ul class="effect-list"><li>Weathering</li><li>Residue</li><li>Wet surfaces</li><li>Environmental detail</li></ul></div>
+<div class="more-card"><h3>And many more.</h3><p>Dirt particles, rust, scratches and fingerprints — more ways to finish your surfaces.</p><figure class="media-figure ">
+      <div class="media-frame" style="--ratio:4000/1000"><img src="https://assets.superhivemarket.com/cache/757624428fe0ba0dd579e1a1997ae9c7.jpg" width="4000" height="1000" alt="Four panels demonstrating dirt particles, quick rust, scratches and fingerprints." loading="lazy" decoding="async"></div>
+      <figcaption><span><strong>More shaders</strong><span class="caption-detail">Dirt Particles · Quick Rust · Scratches · Fingerprints</span></span><span class="media-type">SHADER SHOWCASE</span></figcaption>
+    </figure><ul class="effect-list"><li>Dirt Particles</li><li>Quick Rust</li><li>Scratches</li><li>Fingerprints</li></ul></div>
   </section>
 
   <section class="section" id="showcase">
