@@ -4,42 +4,169 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lazy Realism FX | Environment Effects for Blender</title>
-<meta name="description" content="Add geometry effects and one-click shaders to Blender scenes with Lazy Realism FX.">
+<meta name="description" content="Bring Blender scenes to life with 40+ effects, procedural Geometry Nodes and one-click shaders in Lazy Realism FX.">
 <style>
-:root{--ink:#171717;--muted:#666;--display:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:var(--display);background:transparent;-webkit-font-smoothing:antialiased}a{color:inherit}.page{max-width:1080px;padding:24px;margin:auto}
-.system-bar,.hero-copy,.media-slot,.closing{border:1px solid rgba(0,0,0,.09);border-radius:10px;background:rgba(255,255,255,.72);box-shadow:inset 0 1px 0 #fff,0 8px 28px #00000006}.system-bar{display:flex;justify-content:space-between;padding:18px 24px;font-size:13px}.system-code,.locator,.hero-id{color:var(--muted);font-size:10px}.locator{display:flex;justify-content:space-between;padding:24px 8px;letter-spacing:.1em}.hero-copy,.closing{padding:48px}.hero-header{display:flex;justify-content:space-between;gap:20px}.hero-kicker{margin-bottom:24px;font-size:13px;font-weight:600}h1{font-size:clamp(50px,9vw,96px);font-weight:650;letter-spacing:-.075em;line-height:.98;margin:0 0 28px}.brand-title{display:inline-block;white-space:nowrap;font-size:clamp(12px,7vw,96px);letter-spacing:2px}h2{font-size:clamp(30px,4.6vw,48px);font-weight:600;letter-spacing:-.055em;line-height:1.08;margin:0}h3{font-size:23px;font-weight:600;letter-spacing:-.035em;margin:0 0 12px}.hero-lead{max-width:680px;font-size:18px;line-height:1.65;color:#555}.hero-id{text-align:right;line-height:1.8}.actions,.chips,.nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.ui-button{display:inline-flex;padding:14px 23px;border:1px solid #ddd;border-radius:10px;background:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:600}.ui-button.primary,.closing .ui-button{color:#fff;background:#000;border-color:#000}.chips span{padding:8px 13px;border:1px solid #ddd;border-radius:10px;font-size:11px;color:#666}.nav{justify-content:center;gap:24px;font-size:12px}.nav a{text-decoration:none}.section{margin-top:64px;scroll-margin-top:24px;content-visibility:auto;contain-intrinsic-size:auto 550px}.section-heading{margin-bottom:24px;padding:0 8px}.section-index,.module-tag{font-size:10px;letter-spacing:.08em;margin-bottom:14px;color:#000}.section-title-wrap p{font-size:15px;color:#666;line-height:1.6}.media-slot{position:relative;display:grid;place-items:center;text-align:center;padding:28px 24px;overflow:hidden;background:rgba(255,255,255,.45)}.media-slot:before{content:attr(data-slot);position:absolute;top:16px;left:18px;font-size:10px;color:#777}.media-slot:after{content:'LAZY 3D';position:absolute;bottom:14px;right:18px;font-size:9px;color:#888}.slot-mark{font-size:38px;font-weight:300;color:#000;line-height:1;margin-bottom:12px}.media-slot strong{display:block;font-size:clamp(20px,3vw,30px);font-weight:600;letter-spacing:-.045em}.media-slot p{max-width:660px;margin:10px auto 0;font-size:13px;line-height:1.7;color:#666}.ratio-square{aspect-ratio:1/1}.ratio-wide{aspect-ratio:2/1}.ratio-banner{aspect-ratio:10/3}.ratio-video{aspect-ratio:16/9;width:100%;min-height:0;padding:clamp(12px,4vw,40px)}.hero-visual .slot-mark{font-size:clamp(18px,6vw,38px);margin-bottom:clamp(4px,1vw,12px)}.hero-visual strong{font-size:clamp(14px,4vw,30px)}.hero-visual p{font-size:clamp(10px,1.8vw,13px);line-height:1.4}.media-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}.leaves-media-pair{grid-template-columns:1fr}.media-pair .media-slot{width:100%}.caption{text-align:center;font-size:14px;line-height:1.7;padding:16px 20px 0;color:#666;max-width:840px;margin:auto}.module-section{margin-top:40px}.module-section h3{margin:0 0 14px;padding:0 8px}.module-section .media-slot{margin-bottom:14px}.and-more{padding:22px 26px;border:1px solid rgba(0,0,0,.09);border-radius:10px;background:rgba(255,255,255,.72);font-size:14px;line-height:1.75;color:#555}.and-more b{color:#171717}.closing{margin-top:64px}.closing p{font-size:16px;line-height:1.7;color:#666}footer{display:flex;justify-content:space-between;padding:28px 8px;font-size:10px;color:#666}a:focus-visible{outline:3px solid #000;outline-offset:5px}@supports(backdrop-filter:blur(8px)){.system-bar{backdrop-filter:blur(8px)}}
-@media(max-width:760px){.page{padding:16px}.hero-copy,.closing{padding:32px 24px}.hero-id,.system-code,.locator-track{display:none}.hero-lead{font-size:16px}.section{margin-top:48px}.media-pair{grid-template-columns:1fr}.ratio-square{max-width:100%}}
-@media(max-width:460px){.page{padding:10px}.hero-visual{min-height:0}.nav{gap:14px}.media-slot p{font-size:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media(prefers-reduced-transparency:reduce){.system-bar{backdrop-filter:none}}
+
+:root{--ink:#171717;--muted:#666560;--line:rgba(0,0,0,.10);--glass:rgba(255,255,255,.78);--radius:10px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:transparent;color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}a{color:inherit}img{max-width:100%}.page{max-width:1080px;margin:auto;padding:24px}h1,h2,h3,p,figure{margin:0}h1{line-height:1.12;font-weight:650;margin:0 0 24px}.brand-title{display:block;white-space:nowrap;letter-spacing:2px;font-size:clamp(0px,6.8vw,80px)}h2{font-size:clamp(32px,4.6vw,50px);letter-spacing:-.045em;line-height:1.12;font-weight:600;max-width:820px}h3{font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.15;font-weight:600}p{line-height:1.7}a:focus-visible{outline:2px solid #171717;outline-offset:5px}
+.system-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);font-size:11px;letter-spacing:.06em}.system-code{font-size:10px;color:var(--muted)}.locator{display:flex;justify-content:space-between;padding:24px 4px;font-size:10px;letter-spacing:.12em;color:var(--muted)}.hero-copy,.closing{padding:clamp(24px,4.5vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 28px #00000006}.hero-copy{container-type:inline-size}.hero-kicker{font-size:13px;font-weight:600;margin-bottom:22px}.hero-lead{font-size:18px;color:#555550;max-width:720px}.hero-lead strong{font-weight:600;color:#252522}.actions,.chips,.nav{display:flex;flex-wrap:wrap;gap:10px}.actions{margin-top:26px}.ui-button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.8);font-size:13px;font-weight:600;text-decoration:none;transition:background .15s}.ui-button:hover{background:#f1f1ee}.ui-button.primary{color:#fff;background:#171717;border-color:#171717}.ui-button.primary:hover{background:#363634}.chips{margin-top:26px;gap:8px}.chips span{padding:7px 11px;border:1px solid var(--line);border-radius:var(--radius);font-size:11px;color:var(--muted)}.hero-media{margin-top:18px}.nav{justify-content:center;gap:26px;padding:22px 0;font-size:12px;border-bottom:1px solid var(--line)}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
+.section{margin-top:76px;scroll-margin-top:24px}.section-heading{margin-bottom:28px}.eyebrow{font-size:10px;line-height:1.5;letter-spacing:.13em;font-weight:600;margin-bottom:16px;color:var(--muted)}.section-heading>p{font-size:16px;color:var(--muted);max-width:700px;margin-top:17px}.overview-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center}.overview-copy{padding-right:8px}.overview-copy h3{font-size:28px;margin-bottom:16px}.overview-copy p{font-size:15px;color:var(--muted);margin-bottom:24px}.detail-list{padding:0;list-style:none;margin:0;display:grid;gap:14px}.detail-list li{font-size:13px;line-height:1.6;padding-top:14px;border-top:1px solid var(--line);color:var(--muted)}.detail-list strong{display:block;font-weight:600;color:var(--ink)}
+.media-figure{min-width:0;margin:0}.media-frame{position:relative;aspect-ratio:var(--ratio);width:100%;border-radius:var(--radius);overflow:hidden;background:#ededeb;box-shadow:0 0 0 1px rgba(0,0,0,.08);isolation:isolate}.media-frame img,.media-frame iframe{display:block;width:100%;height:100%;border:0;object-fit:contain}.video-frame{background:#141414}.media-figure figcaption{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:13px 2px 0;font-size:12px;line-height:1.55;color:var(--muted)}.media-figure figcaption strong{display:block;color:var(--ink);font-size:12px;font-weight:600}.caption-detail{display:block;margin-top:2px}.media-type{flex-shrink:0;font-size:9px;letter-spacing:.09em;padding-top:2px}.watch-link{font-size:11px;text-underline-offset:3px;flex-shrink:0}.media-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}.square-scene{max-width:720px;margin-left:auto;margin-right:auto}.intro-caption{font-size:16px;line-height:1.75;color:var(--muted);max-width:770px;margin:26px auto 0;text-align:center}.intro-caption strong{color:var(--ink);font-weight:600}.library-heading{padding-top:72px;margin-top:56px;border-top:1px solid var(--line)}.module{margin-top:52px;scroll-margin-top:24px}.module-heading{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:14px 36px;margin-bottom:22px;align-items:start}.module-heading p{max-width:600px;color:var(--muted);font-size:14px}.module-tag{grid-column:2;font-size:9px;letter-spacing:.11em;color:var(--muted)}.feature-note{padding:24px 26px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.65);font-size:14px;line-height:1.75;color:var(--muted)}.feature-note strong{color:var(--ink);font-weight:600}.feature-note a{text-underline-offset:4px}.more-card{margin-top:40px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--glass)}.more-card h3{font-size:24px;margin-bottom:12px}.more-card p{font-size:14px;line-height:1.75;color:var(--muted);max-width:760px}.effect-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}.effect-list li{font-size:12px;line-height:1.6;border:1px solid var(--line);border-radius:var(--radius);padding:6px 11px}.pending-media{display:grid;place-items:center;aspect-ratio:var(--ratio);border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.6);padding:clamp(8px,3vw,28px);text-align:center}.pending-media .preview-title{font-size:clamp(15px,3vw,26px);font-weight:600;letter-spacing:-.025em}.pending-media .preview-detail{margin-top:6px;font-size:clamp(10px,1.6vw,13px);color:var(--muted)}.pending-media .eyebrow{margin-bottom:10px}.leaves-media-pair{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}.closing{margin-top:76px}.closing p{font-size:16px;color:var(--muted);margin-top:18px;max-width:680px}.closing .actions{margin-top:24px}.workflow-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.workflow-step{border-top:1px solid var(--line);padding-top:18px}.workflow-step span{font-size:10px;letter-spacing:.1em;color:var(--muted)}.workflow-step h3{font-size:21px;margin-top:10px}.workflow-step p{font-size:13px;color:var(--muted);margin-top:9px}footer{display:flex;justify-content:space-between;gap:16px;padding:28px 2px;font-size:10px;color:var(--muted)}
+.pending-media{min-height:0;min-width:0;overflow:hidden}
+@supports(font-size:1cqi){.brand-title{font-size:clamp(0px,9cqi,82px)}}
+@supports(backdrop-filter:blur(8px)){.system-bar{backdrop-filter:blur(8px)}}
+@media(max-width:760px){.page{padding:16px}.hero-copy,.closing{padding:30px 24px}.hero-lead{font-size:16px}.system-code,.locator-track{display:none}.section{margin-top:54px}.overview-grid{grid-template-columns:minmax(0,1fr);gap:28px}.overview-grid .media-figure{max-width:560px;width:100%;margin:auto}.overview-copy{padding:0}.module-heading{grid-template-columns:minmax(0,1fr);gap:12px}.module-tag{grid-column:1}.library-heading{padding-top:46px;margin-top:40px}.module{margin-top:40px}.media-figure figcaption{gap:12px}.media-type{font-size:8px}.closing{margin-top:54px}.workflow-steps{gap:20px}.intro-caption{text-align:left;font-size:15px}.nav{gap:20px}}
+@media(max-width:460px){.page{padding:10px}.hero-copy,.closing{padding:24px 18px}.hero-kicker{font-size:11px}.system-bar{padding:15px;font-size:10px}.locator{padding:20px 2px}.hero-lead{font-size:15px}.ui-button{padding:12px 16px;font-size:12px}.chips span{font-size:10px;padding:6px 9px}.nav{gap:12px;font-size:11px}.media-figure figcaption{flex-direction:column;gap:6px}.media-type{display:none}.section-heading>p{font-size:15px}.workflow-steps{grid-template-columns:1fr}.feature-note,.more-card{padding:22px}.module-heading p{font-size:14px}.pending-media .eyebrow{font-size:8px;margin-bottom:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ui-button{transition:none}}@media(prefers-reduced-transparency:reduce){.system-bar{backdrop-filter:none}.system-bar,.hero-copy,.closing,.more-card,.feature-note,.pending-media{background:#fff}}
+
 </style>
 </head>
-<body><div class="page" id="top">
-<div class="system-bar"><span>LAZY 3D / LAZY REALISM FX</span><span class="system-code">ENVIRONMENT EFFECTS / BLENDER</span></div>
-<div class="locator"><div>PRODUCT OVERVIEW</div><div class="locator-track">SCENE DETAIL · WEATHER · MOTION</div></div>
-<header class="hero"><div class="hero-copy"><div class="hero-header"><div><div class="hero-kicker">A little detail. A world of difference.</div><h1><span class="brand-title">Lazy Realism FX</span></h1></div><div class="hero-id">ENVIRONMENT<br>EFFECTS TOOLKIT<br>BY LAZY 3D</div></div><p class="hero-lead">The small details make a scene feel real. Add <strong>weather, wind, floating particles and surface effects</strong> to your Blender projects with a collection of tools built around one FX workspace.</p><div class="actions"><a class="ui-button primary" href="#effects">Explore the effects</a><a class="ui-button" href="#workflow">See the difference</a></div><div class="chips"><span>Geometry Nodes</span><span>One-click shaders</span><span>40+ effects</span><span>Blender</span></div></div></header>
-<!-- HERO MEDIA: reserve square 1000×1000 source and display at 1:1. --><div class="media-slot ratio-video hero-visual" data-slot="01 / HERO"><div><div class="slot-mark">01</div><strong>One scene. More life.</strong><p>Hero render or product trailer — show several effects working together.</p></div></div>
-<nav class="nav" aria-label="Page sections"><a href="#overview">Overview</a><a href="#effects">What's inside</a><a href="#shaders">Shaders</a><a href="#showcase">See the difference</a></nav>
-<section class="section" id="overview"><div class="section-heading"><div class="section-index">01 / LAZY REALISM FX</div><h2>Make the scene feel lived in.</h2><div class="section-title-wrap"><p>From a clean starting point to a world with atmosphere.</p></div></div><div class="media-slot ratio-square" data-slot="02 / LIVED-IN SCENE"><div><div class="slot-mark">02</div><strong>Details that tell a story</strong><p>Wind through the trees. Leaves across the ground. Rain on a surface. Dust moving through the air.</p></div></div></section>
-<section class="section" id="effects"><div class="section-heading"><div class="section-index">02 / THE EFFECTS LIBRARY</div><h2>Improve your renders in seconds.</h2><div class="section-title-wrap"><p>More than 40 effects, ready to add atmosphere, detail and motion to your Blender scenes.</p></div></div><div class="media-slot ratio-wide" data-slot="03 / EFFECTS OVERVIEW"><div><div class="slot-mark">03</div><strong>One toolkit. A transformed render.</strong><p>Geometry Nodes and shaders can reshape the feel of your scene without demanding hours of setup.</p></div></div><div class="caption">More than 40 effects across procedural geometry generators and one-click shaders can transform your render for the better, without taking up your time.</div>
-<div class="section-heading" style="margin-top:48px"><div class="section-index">GEOMETRY NODES</div><h2>Procedural effects for your scene.</h2></div>
-<div class="module-section"><h3>Physical Leaves</h3><div class="media-pair leaves-media-pair"><div class="media-slot ratio-banner" data-slot="04 / PHYSICAL LEAVES — DETAIL"><div><strong>Physical Leaves</strong><p>Show the controls or close detail.</p></div></div><div class="media-slot ratio-wide" data-slot="05 / PHYSICAL LEAVES — RESULT"><div><strong>Leaves in the scene</strong><p>Show the generated result in context.</p></div></div></div></div>
-<div class="module-section"><h3>Dust &amp; Ashes</h3><div class="media-slot ratio-banner" data-slot="06 / DUST & ASHES"><div><strong>Particles that catch the light</strong></div></div></div>
-<div class="module-section"><h3>Birds &amp; Insects</h3><div class="media-slot ratio-banner" data-slot="07 / BIRDS & INSECTS"><div><strong>Bring the background to life</strong></div></div></div>
-<div class="module-section"><h3>Flying Airplanes</h3><div class="media-slot ratio-banner" data-slot="08 / FLYING AIRPLANES"><div><strong>Add movement across the sky</strong></div></div></div>
-<div class="module-section"><h3>Moss &amp; Wear</h3><div class="media-slot ratio-banner" data-slot="09 / MOSS & WEAR"><div><strong>Give surfaces a lived-in history</strong></div></div></div>
-<div class="module-section"><h3>Tracks &amp; Debris</h3><div class="media-slot ratio-banner" data-slot="10 / TRACKS & DEBRIS"><div><strong>Leave a trace in the environment</strong></div></div></div>
-<div class="module-section"><h3>QX Snow</h3><div class="media-slot ratio-banner" data-slot="11 / QX SNOW"><div><strong>Shape a winter scene</strong></div></div></div>
-<div class="module-section"><h3>3D Puddles</h3><div class="media-slot ratio-banner" data-slot="12 / 3D PUDDLES"><div><strong>Procedural puddles with real volume</strong><p>Fill your mesh with automatically generated puddles. Each puddle is a volumetric mesh, not a flat plane.</p></div></div></div>
-<div class="module-section"><div class="and-more"><b>And many more</b><br>Rain, snow coverage, wind, tree movement, spider webs, foam and slime, droplets, sand, grass, branches, collisions and more procedural scene effects.</div></div>
-</section>
-<section class="section" id="shaders"><div class="section-heading"><div class="section-index">03 / ONE-CLICK SHADERS</div><h2>Surface detail, instantly.</h2><div class="section-title-wrap"><p>Apply a shader, tune its look and bring new texture to your materials.</p></div></div>
-<div class="module-section"><h3>Ground Dirt</h3><div class="media-slot ratio-wide" data-slot="13 / GROUND DIRT"><div><strong>Ground Dirt</strong><p>Layer natural dirt and variation across a surface.</p></div></div></div>
-<div class="module-section"><h3>Moss</h3><div class="media-slot ratio-banner" data-slot="14 / MOSS SHADER"><div><strong>Moss</strong></div></div></div>
-<div class="module-section"><h3>Snow</h3><div class="media-slot ratio-banner" data-slot="15 / SNOW SHADER"><div><strong>Snow</strong></div></div></div>
-<div class="module-section"><h3>Dust</h3><div class="media-slot ratio-banner" data-slot="16 / DUST SHADER"><div><strong>Dust</strong></div></div></div>
-<div class="module-section"><div class="and-more"><b>Oil Puddles · Oil Stains · And many more</b><br>Explore additional surface shaders for weathering, residue, wetness and environmental detail.</div></div>
-</section>
-<section class="section" id="showcase"><div class="section-heading"><div class="section-index">04 / BEFORE &amp; AFTER</div><h2>See the difference.</h2><div class="section-title-wrap"><p>It’s your scene. Adjust it. Create.</p></div></div><div class="media-pair"><div class="media-slot ratio-wide" data-slot="17 / BEFORE"><div><strong>The starting scene</strong><p>Place the clean render here.</p></div></div><div class="media-slot ratio-wide" data-slot="18 / AFTER"><div><strong>With Lazy Realism FX</strong><p>Place the matching render with effects here.</p></div></div></div><div class="caption">Weather, motion and surface detail work together to change the mood of a scene.</div></section>
-<div class="closing"><h2>Give your scene<br>the finishing details.</h2><p>Bring weather, motion and atmosphere into your next Blender project with Lazy Realism FX.</p><a class="ui-button primary" href="#effects">Explore the toolkit</a></div><footer><span>LAZY 3D / LAZY REALISM FX</span><a href="#top">Back to top ↑</a></footer>
-</div></body></html>
+<body>
+<main class="page" id="top">
+  <div class="system-bar"><span>LAZY 3D / LAZY REALISM FX</span><span class="system-code">ENVIRONMENT EFFECTS / BLENDER</span></div>
+  <div class="locator"><span>PRODUCT OVERVIEW</span><span class="locator-track">SCENE DETAIL · WEATHER · MOTION</span></div>
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="hero-kicker">A little detail. A world of difference.</p>
+      <h1><span class="brand-title">Lazy Realism FX</span></h1>
+      <p class="hero-lead">The small details make a scene feel real. Bring <strong>weather, motion and surface detail</strong> to your Blender projects with a collection of effects in one FX workspace.</p>
+      <div class="actions"><a class="ui-button primary" href="#geometry">Explore the effects</a><a class="ui-button" href="#showcase">See the difference</a></div>
+      <div class="chips"><span>Geometry Nodes</span><span>One-click shaders</span><span>40+ effects</span><span>Blender</span></div>
+    </div>
+    <!-- HERO: YouTube URL still needed. Replace this placeholder with the video-frame pattern below; keep --ratio:16/9 for the 1920×1080 trailer. -->
+    <div class="hero-media pending-media" style="--ratio:16/9"><div><div class="eyebrow">LAZY REALISM FX</div><p class="preview-title">One scene. More life.</p><p class="preview-detail">Weather · Motion · Surface detail</p></div></div>
+  </header>
+  <nav class="nav" aria-label="Page sections"><a href="#overview">Overview</a><a href="#geometry">What's inside</a><a href="#shaders">Shaders</a><a href="#showcase">See the difference</a></nav>
+
+  <section class="section" id="overview">
+    <div class="section-heading"><div class="eyebrow">01 / A SCENE WITH LIFE</div><h2>Make the scene feel lived in.</h2><p>A breeze through the trees. Movement in the sky. The little signs of a world that keeps moving.</p></div>
+    <div class="overview-grid">
+<figure class="media-figure ">
+  <div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/168c7ed0e90096e4843b8953ff8b6ecd.gif" width="500" height="500" alt="Animated tree bending in the wind beside a lake." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Tree Wind</strong><span class="caption-detail">A little movement changes the whole scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+<div class="overview-copy"><h3>Details you can feel.</h3><p>A convincing environment is more than its main objects. Add the movement, traces and atmosphere that make those objects feel part of the world.</p><ul class="detail-list"><li><strong>Motion</strong>Wind, flying particles and life in the distance.</li><li><strong>Surface detail</strong>Moss, dirt, dust and the marks left by time.</li><li><strong>Atmosphere</strong>Small additions that give your scene a story.</li></ul></div></div>
+  </section>
+
+  <section class="section" id="effects">
+    <div class="section-heading"><div class="eyebrow">02 / THE EFFECTS LIBRARY</div><h2>Improve your renders in seconds.</h2><p>Build on your scene with effects that make a visible difference.</p></div>
+<figure class="media-figure " id="effects-preview">
+  <div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/f27c41a30727a7a46bb6496f9c9258fa.jpg" width="2000" height="1000" alt="Iridescent oil stains on a road beside a weathered car and fallen leaves." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Oil Stains</strong><span class="caption-detail">Surface detail in a finished scene.</span></span><span class="media-type">SCENE RENDER</span></figcaption>
+</figure>
+<p class="intro-caption"><strong>More than 40 effects</strong> across procedural Geometry Nodes and one-click shaders bring atmosphere, detail and motion to your renders, without hours of setup.</p>
+    <div class="section-heading library-heading" id="geometry"><div class="eyebrow">GEOMETRY NODES</div><h2>What's inside.</h2><p>Procedural details for the ground, the sky and everything in between.</p></div>
+<article class="module">
+  <div class="module-heading"><h3>Physical Leaves</h3><p>Scatter leaves across your scene to add a natural layer of detail.</p></div>
+  <!-- Physical Leaves media not supplied yet. Keep these two slots stacked at every viewport width: 1000×300, then 2000×1000. -->
+    <div class="leaves-media-pair"><div class="pending-media" style="--ratio:1000/300"><div><p class="preview-title">Physical Leaves</p><p class="preview-detail">A natural layer of detail.</p></div></div><div class="pending-media" style="--ratio:2000/1000"><div><p class="preview-title">Leaves in the scene</p><p class="preview-detail">Small details. A richer environment.</p></div></div></div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Dust &amp; Ashes</h3><p>Add floating particles that catch the light and give the air a sense of depth.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching warm light in front of a circular vent." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Flying Dust</strong><span class="caption-detail">Motion and atmosphere, right in the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Birds &amp; Insects</h3><p>Give the background a life of its own, with movement that makes the sky feel inhabited.</p></div>
+  <div class="media-stack"><figure class="media-figure square-scene">
+  <div class="media-frame" style="--ratio:1000/1000"><img src="https://assets.superhivemarket.com/cache/7bf5ed4030583c93d2d22c89b501f815.gif" width="1000" height="1000" alt="Birds flying above an autumn forest and a wooden cabin." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Birds</strong><span class="caption-detail">Life above the tree line.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure><figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/4ee8d0c1f1f0680496271a667e6708c9.gif" width="1000" height="500" alt="Blender viewport showing birds above a cabin and the Lazy Realism FX interface." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Birds · Workflow</strong><span class="caption-detail">A look at the effect inside Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure><figure class="media-figure">
+  <div class="media-frame video-frame" style="--ratio:16/9"><iframe src="https://www.youtube-nocookie.com/embed/lgOGxgcAwk4" title="Bird Formations · Showcase" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <figcaption><span><strong>Bird Formations · Showcase</strong><span class="caption-detail">Watch the formations in motion.</span></span><a class="watch-link" href="https://youtu.be/lgOGxgcAwk4" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+</figure></div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Flying Airplanes</h3><p>Introduce distant movement and a sense of scale with airplanes crossing the sky.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/a56f68d273454e612d53993a281e587f.gif" width="1000" height="300" alt="Airplane flying through a cloudy sky." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Flying Airplanes</strong><span class="caption-detail">Movement across the sky.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Moss &amp; Wear</h3><p>Give your environment a history. Pair natural growth with weathered edges and surface marks.</p></div>
+  <div class="media-stack"><figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/d18c1ceaa6599b6658c707b0e84bf571.gif" width="1000" height="500" alt="Blender viewport showing worn edges and weathering on a concrete building." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Edge Wear</strong><span class="caption-detail">Follow the weathering workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure><figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/bf0e4322e6d5c6116fcf03f3bd0bf405.gif" width="1000" height="500" alt="Blender viewport showing vertical leak stains on a concrete building." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Leaks</strong><span class="caption-detail">Streaks and residue across an architectural surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure></div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Tracks &amp; Debris</h3><p>Leave traces of movement and add scattered detail to the ground.</p></div>
+  <div class="feature-note"><strong>Tell the story of a space.</strong> Tracks and debris help connect your objects to the environment around them. For surface marks, explore the <a href="#tire-marks">Tire Marks shader</a> below.</div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>QX Snow</h3><p>Bring a winter layer to your scene with procedural snow.</p></div>
+  <div class="feature-note"><strong>A change of season.</strong> Add snow geometry to the environment, then refine the surface with the <a href="#snow-shader">Snow shader</a>.</div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>3D Puddles</h3><p>Automatically generate volumetric puddle meshes on your mesh using a procedural algorithm.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/544ebb07ab4ebfd1bf04ddce795e6055.gif" width="1000" height="500" alt="A procedural puddle forming on an uneven road beside a car." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>3D Puddles</strong><span class="caption-detail">Procedural puddles with real volume.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure><p class="intro-caption">Each puddle is a <strong>three-dimensional mesh</strong>, shaped procedurally to fill your mesh.</p>
+</article>
+<div class="more-card"><h3>And many more.</h3><p>Keep building the scene with more procedural effects from the library.</p><ul class="effect-list"><li>Rain</li><li>Snow coverage</li><li>Wind</li><li>Tree movement</li><li>Spider webs</li><li>Foam &amp; slime</li><li>Droplets</li><li>Sand</li><li>Grass</li><li>Branches</li><li>Collisions</li></ul></div>
+  </section>
+
+  <section class="section" id="shaders">
+    <div class="section-heading library-heading"><div class="eyebrow">WHAT'S INSIDE / MATERIALS</div><h2>One-click shaders.</h2><p>The finishing layer: dirt, growth, residue and weathering. Apply a shader, adjust its look and bring new texture to your surfaces.</p></div>
+<article class="module">
+  <div class="module-heading"><h3>Ground Dirt</h3><p>Bring natural dirt and variation to the ground, so it feels connected to the rest of your scene.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Blender viewport showing ground dirt and scattered surface details beside a wall." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Ground Shader</strong><span class="caption-detail">Surface detail, demonstrated in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Moss</h3><p>Add natural growth that gives your surfaces a sense of age and place.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Green moss covering a weathered surface beside fallen leaves." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Moss</strong><span class="caption-detail">A closer look at growth across the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module" id="snow-shader">
+  <div class="module-heading"><h3>Snow</h3><p>Finish a winter scene with a layer of snow on your materials.</p></div>
+  <div class="feature-note"><strong>Geometry and materials, together.</strong> Combine the Snow shader with QX Snow to carry a winter look from the shape of your scene to its surfaces.</div>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Dust</h3><p>Bring a settled, lived-in quality to objects with a layer of surface dust.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/6a1a16463f0ef58bb2bad0053aefdcd4.gif" width="1000" height="500" alt="Blender viewport showing dust on a vintage television and lantern." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Dust Shader · Workflow</strong><span class="caption-detail">From the FX library to the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module" id="tire-marks">
+  <div class="module-heading"><h3>Tire Marks</h3><p>Add the traces of traffic to roads and ground surfaces.</p></div>
+  <figure class="media-figure ">
+  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/a7978dbb9566eee270972fbbcf1d368c.gif" width="1000" height="500" alt="Blender viewport showing tire marks and dirt on a road beside a car." loading="lazy" decoding="async"></div>
+  <figcaption><span><strong>Tire Shader · Workflow</strong><span class="caption-detail">Surface marks in the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
+</figure>
+</article>
+<article class="module">
+  <div class="module-heading"><h3>Oil Puddles &amp; Oil Stains</h3><p>Add oily residue and iridescent surface detail to your environment.</p></div>
+  <div class="feature-note"><strong>A small detail with a visible impact.</strong> See Oil Stains in the <a href="#effects-preview">finished scene above ↑</a>.</div>
+</article>
+<div class="more-card"><h3>And many more.</h3><p>Explore additional shaders for weathering, residue, wetness and environmental detail.</p><ul class="effect-list"><li>Weathering</li><li>Residue</li><li>Wet surfaces</li><li>Environmental detail</li></ul></div>
+  </section>
+
+  <section class="section" id="showcase">
+    <div class="section-heading library-heading"><div class="eyebrow">03 / FROM SETUP TO RESULT</div><h2>See the difference.</h2><p>Watch Pro Dirt in action, then make the effect your own.</p></div>
+<figure class="media-figure">
+  <div class="media-frame video-frame" style="--ratio:16/9"><iframe src="https://www.youtube-nocookie.com/embed/CW756xvt0Ds" title="Pro Dirt · Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <figcaption><span><strong>Pro Dirt · Video</strong><span class="caption-detail">See the surface effect and workflow in motion.</span></span><a class="watch-link" href="https://youtu.be/CW756xvt0Ds" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+</figure>
+<div class="workflow-steps"><div class="workflow-step"><span>01</span><h3>Choose.</h3><p>Pick the effect your scene needs.</p></div><div class="workflow-step"><span>02</span><h3>Adjust.</h3><p>Tune the look to fit your environment.</p></div><div class="workflow-step"><span>03</span><h3>Create.</h3><p>Bring the details together in your render.</p></div></div>
+  </section>
+  <section class="closing"><div class="eyebrow">LAZY REALISM FX / BLENDER</div><h2>Give your scene<br>the finishing details.</h2><p>Bring weather, motion and atmosphere into your next Blender project.</p><div class="actions"><a class="ui-button primary" href="#geometry">Explore the toolkit</a></div></section>
+  <footer><span>LAZY 3D / LAZY REALISM FX</span><a href="#top">Back to top ↑</a></footer>
+</main>
+</body>
+</html>
