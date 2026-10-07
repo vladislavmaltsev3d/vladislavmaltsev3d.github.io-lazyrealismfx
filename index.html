@@ -14,18 +14,16 @@
 body:before,body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none}
 body:before{background-image:radial-gradient(circle,rgba(0,0,0,.12) 1px,transparent 1.25px),radial-gradient(circle,rgba(0,0,0,.18) 1.3px,transparent 1.75px),radial-gradient(circle,rgba(0,0,0,.24) 1.65px,transparent 2.15px),linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px);background-size:18px 18px,74px 74px,211px 211px,108px 108px,108px 108px;background-position:0 0,29px 17px,83px 61px,0 0,0 0}
 body:after{opacity:.7;background-image:radial-gradient(circle at 11% 14%,transparent 0 76px,rgba(0,0,0,.07) 77px,transparent 78px),radial-gradient(circle at 88% 31%,transparent 0 118px,rgba(0,0,0,.055) 119px,transparent 120px),linear-gradient(35deg,transparent 49.85%,rgba(0,0,0,.045) 50%,transparent 50.15%);background-size:720px 720px,940px 940px,540px 540px;background-position:0 0,100% 180px,50px 20px}
-/* Soft local paper fields keep copy crisp without hiding the blueprint. */
-.section-heading,.module-heading,.overview-copy,.intro-caption,.media-figure figcaption,.locator,.nav,footer{position:relative;background:var(--text-shield);box-shadow:0 0 18px 12px var(--text-shield);text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.88)}
-.ui-button.primary{position:relative;text-shadow:none}
-.system-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);font-size:11px;letter-spacing:.06em}.system-code{font-size:10px;color:var(--muted)}.locator{display:flex;justify-content:space-between;padding:24px 4px;font-size:10px;letter-spacing:.12em;color:var(--muted)}.hero-copy,.closing{padding:clamp(24px,4.5vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 28px #00000006}.hero-copy{container-type:inline-size}.hero-kicker{font-size:13px;font-weight:600;margin-bottom:22px}.hero-lead{font-size:18px;color:#555550;max-width:720px}.hero-lead strong{font-weight:600;color:#252522}.actions,.chips,.nav{display:flex;flex-wrap:wrap;gap:10px}.actions{margin-top:26px}.ui-button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.8);font-size:13px;font-weight:600;text-decoration:none;transition:background .15s}.ui-button:hover{background:#f1f1ee}.ui-button.primary{color:#fff;background:#171717;border-color:#171717}.ui-button.primary:hover{background:#363634}.chips{margin-top:26px;gap:8px}.chips span{padding:7px 11px;border:1px solid var(--line);border-radius:var(--radius);font-size:11px;color:var(--muted)}.hero-media{margin-top:18px}.nav{justify-content:center;gap:26px;padding:22px 0;font-size:12px;border-bottom:1px solid var(--line)}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
-.section{margin-top:76px;scroll-margin-top:24px}.section-heading{margin-bottom:28px}.eyebrow{font-size:10px;line-height:1.5;letter-spacing:.13em;font-weight:600;margin-bottom:16px;color:var(--muted)}.section-heading>p{font-size:16px;color:var(--muted);max-width:700px;margin-top:17px}.overview-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center}.overview-copy{padding-right:8px}.overview-copy h3{font-size:28px;margin-bottom:16px}.overview-copy p{font-size:15px;color:var(--muted);margin-bottom:24px}.detail-list{padding:0;list-style:none;margin:0;display:grid;gap:14px}.detail-list li{font-size:13px;line-height:1.6;padding-top:14px;border-top:1px solid var(--line);color:var(--muted)}.detail-list strong{display:block;font-weight:600;color:var(--ink)}
-.media-figure{min-width:0;margin:0}.media-frame{position:relative;aspect-ratio:var(--ratio);width:100%;border-radius:var(--radius);overflow:hidden;background:#ededeb;box-shadow:0 0 0 1px rgba(0,0,0,.08);isolation:isolate}.media-frame img,.media-frame iframe,.media-frame video{display:block;width:100%;height:100%;border:0;object-fit:contain}.video-frame{background:#141414}.media-figure figcaption{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:13px 2px 0;font-size:12px;line-height:1.55;color:var(--muted)}.media-figure figcaption strong{display:block;color:var(--ink);font-size:12px;font-weight:600}.caption-detail{display:block;margin-top:2px}.media-type{flex-shrink:0;font-size:9px;letter-spacing:.09em;padding-top:2px}.watch-link{font-size:11px;text-underline-offset:3px;flex-shrink:0}.media-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}.square-scene{max-width:720px;margin-left:auto;margin-right:auto}.intro-caption{font-size:16px;line-height:1.75;color:var(--muted);max-width:770px;margin:26px auto 0;text-align:center}.intro-caption strong{color:var(--ink);font-weight:600}.library-heading{padding-top:72px;margin-top:56px;border-top:1px solid var(--line)}.module{margin-top:52px;scroll-margin-top:24px}.module-heading{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:14px 36px;margin-bottom:22px;align-items:start}.module-heading p{max-width:600px;color:var(--muted);font-size:14px}.module-tag{grid-column:2;font-size:9px;letter-spacing:.11em;color:var(--muted)}.feature-note{padding:24px 26px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.65);font-size:14px;line-height:1.75;color:var(--muted)}.feature-note strong{color:var(--ink);font-weight:600}.feature-note a{text-underline-offset:4px}.more-card{margin-top:40px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--glass)}.more-card h3{font-size:24px;margin-bottom:12px}.more-card p{font-size:14px;line-height:1.75;color:var(--muted);max-width:760px}.effect-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}.effect-list li{font-size:12px;line-height:1.6;border:1px solid var(--line);border-radius:var(--radius);padding:6px 11px}.pending-media{display:grid;place-items:center;aspect-ratio:var(--ratio);border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.6);padding:clamp(8px,3vw,28px);text-align:center}.pending-media .preview-title{font-size:clamp(15px,3vw,26px);font-weight:600;letter-spacing:-.025em}.pending-media .preview-detail{margin-top:6px;font-size:clamp(10px,1.6vw,13px);color:var(--muted)}.pending-media .eyebrow{margin-bottom:10px}.leaves-media-pair{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}.closing{margin-top:76px}.closing p{font-size:16px;color:var(--muted);margin-top:18px;max-width:680px}.closing .actions{margin-top:24px}.workflow-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.workflow-step{border-top:1px solid var(--line);padding-top:18px}.workflow-step span{font-size:10px;letter-spacing:.1em;color:var(--muted)}.workflow-step h3{font-size:21px;margin-top:10px}.workflow-step p{font-size:13px;color:var(--muted);margin-top:9px}footer{display:flex;justify-content:space-between;gap:16px;padding:28px 2px;font-size:10px;color:var(--muted)}
+/* Soft local paper fields keep copy crisp without creating strips below media. */
+.section-heading,.module-heading,footer{position:relative;background:var(--text-shield);box-shadow:0 0 18px 12px var(--text-shield);text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.88)}
+.hero-copy,.closing{padding:clamp(24px,4.5vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 28px #00000006}.hero-copy{container-type:inline-size}.hero-kicker{font-size:13px;font-weight:600;margin-bottom:22px}.hero-lead{font-size:18px;color:#555550;max-width:720px}.hero-lead strong{font-weight:600;color:#252522}.hero-media{margin-top:18px}
+.section{margin-top:76px;scroll-margin-top:24px}.section-heading{margin-bottom:28px}.section-heading>p{font-size:16px;color:var(--muted);max-width:700px;margin-top:17px}
+.media-figure{min-width:0;margin:0}.media-frame{position:relative;aspect-ratio:var(--ratio);width:100%;border-radius:var(--radius);overflow:hidden;background:#ededeb;box-shadow:0 0 0 1px rgba(0,0,0,.08);isolation:isolate}.media-frame img,.media-frame iframe,.media-frame video{display:block;width:100%;height:100%;border:0;object-fit:contain}.video-frame{background:#141414}.media-figure figcaption{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:13px 2px 0;background:transparent;box-shadow:none;text-shadow:none;font-size:12px;line-height:1.55;color:var(--muted)}.media-figure figcaption strong{display:block;color:var(--ink);font-size:12px;font-weight:600}.caption-detail{display:block;margin-top:2px}.watch-link{font-size:11px;text-underline-offset:3px;flex-shrink:0}.media-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}.square-scene{max-width:720px;margin-left:auto;margin-right:auto}.library-heading{padding-top:72px;margin-top:56px;border-top:1px solid var(--line)}.module{margin-top:52px;scroll-margin-top:24px}.module-heading{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:14px 36px;margin-bottom:22px;align-items:start}.module-heading p{max-width:600px;color:var(--muted);font-size:14px}.feature-points{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:18px 0 0;margin:0}.feature-points li{padding:7px 11px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.72);font-size:11px;line-height:1.5;color:#4f4f4b}.more-card{margin-top:40px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--glass)}.more-card h3{font-size:24px;margin-bottom:12px}.more-card p{font-size:14px;line-height:1.75;color:var(--muted);max-width:760px}.effect-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}.effect-list li{font-size:12px;line-height:1.6;border:1px solid var(--line);border-radius:var(--radius);padding:6px 11px;background:rgba(255,255,255,.6)}.pending-media{display:grid;place-items:center;aspect-ratio:var(--ratio);border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.6);padding:clamp(8px,3vw,28px);text-align:center}.pending-media .preview-title{font-size:clamp(15px,3vw,26px);font-weight:600;letter-spacing:-.025em}.pending-media .preview-detail{margin-top:6px;font-size:clamp(10px,1.6vw,13px);color:var(--muted)}.leaves-media-pair{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}.moss-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.mixed-media-grid{display:grid;grid-template-columns:minmax(0,1.43fr) minmax(0,1fr);gap:24px;align-items:start}.closing{margin-top:76px}.closing p{font-size:16px;color:var(--muted);margin-top:18px;max-width:680px}.workflow-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.workflow-step{border-top:1px solid var(--line);padding-top:18px}.workflow-step span{font-size:10px;letter-spacing:.1em;color:var(--muted)}.workflow-step h3{font-size:21px;margin-top:10px}.workflow-step p{font-size:13px;color:var(--muted);margin-top:9px}footer{display:flex;justify-content:space-between;gap:16px;padding:28px 2px;font-size:10px;color:var(--muted)}
 .pending-media{min-height:0;min-width:0;overflow:hidden}
 @supports(font-size:1cqi){.brand-title{font-size:clamp(0px,9cqi,82px)}}
-@supports(backdrop-filter:blur(8px)){.system-bar{backdrop-filter:blur(8px)}}
-@media(max-width:760px){.page{padding:16px}.hero-copy,.closing{padding:30px 24px}.hero-lead{font-size:16px}.system-code,.locator-track{display:none}.section{margin-top:54px}.overview-grid{grid-template-columns:minmax(0,1fr);gap:28px}.overview-grid .media-figure{max-width:560px;width:100%;margin:auto}.overview-copy{padding:0}.module-heading{grid-template-columns:minmax(0,1fr);gap:12px}.module-tag{grid-column:1}.library-heading{padding-top:46px;margin-top:40px}.module{margin-top:40px}.media-figure figcaption{gap:12px}.media-type{font-size:8px}.closing{margin-top:54px}.workflow-steps{gap:20px}.intro-caption{text-align:left;font-size:15px}.nav{gap:20px}}
-@media(max-width:460px){.page{padding:10px}.hero-copy,.closing{padding:24px 18px}.hero-kicker{font-size:11px}.system-bar{padding:15px;font-size:10px}.locator{padding:20px 2px}.hero-lead{font-size:15px}.ui-button{padding:12px 16px;font-size:12px}.chips span{font-size:10px;padding:6px 9px}.nav{gap:12px;font-size:11px}.media-figure figcaption{flex-direction:column;gap:6px}.media-type{display:none}.section-heading>p{font-size:15px}.workflow-steps{grid-template-columns:1fr}.feature-note,.more-card{padding:22px}.module-heading p{font-size:14px}.pending-media .eyebrow{font-size:8px;margin-bottom:6px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ui-button{transition:none}}@media(prefers-reduced-transparency:reduce){.system-bar{backdrop-filter:none}.system-bar,.hero-copy,.closing,.more-card,.feature-note,.pending-media{background:#fff}}
+@media(max-width:760px){.page{padding:16px}.hero-copy,.closing{padding:30px 24px}.hero-lead{font-size:16px}.section{margin-top:54px}.module-heading{grid-template-columns:minmax(0,1fr);gap:12px}.library-heading{padding-top:46px;margin-top:40px}.module{margin-top:40px}.media-figure figcaption{gap:12px}.moss-pair,.mixed-media-grid,.supplemental-grid{grid-template-columns:minmax(0,1fr)}.closing{margin-top:54px}.workflow-steps{gap:20px}}
+@media(max-width:460px){.page{padding:10px}.hero-copy,.closing{padding:24px 18px}.hero-kicker{font-size:11px}.hero-lead{font-size:15px}.media-figure figcaption{flex-direction:column;gap:6px}.section-heading>p{font-size:15px}.workflow-steps{grid-template-columns:1fr}.more-card{padding:22px}.module-heading p{font-size:14px}.feature-points li{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media(prefers-reduced-transparency:reduce){.hero-copy,.closing,.more-card,.pending-media{background:#fff}}
 
 
 /* Supplementary media: full source proportions, captions outside the frame. */
@@ -34,199 +32,181 @@ body:after{opacity:.7;background-image:radial-gradient(circle at 11% 14%,transpa
 .compact-square{width:100%;max-width:500px;margin-left:auto;margin-right:auto}
 .supplemental-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
 .supplemental-grid>.media-figure{width:100%;min-width:0}
-.shader-overview{margin-bottom:40px}
 .more-card .media-figure{margin-top:22px}
-@media(max-width:760px){.supplemental-grid{grid-template-columns:minmax(0,1fr);gap:26px}.shader-overview{margin-bottom:30px}}
+@media(max-width:760px){.supplemental-grid{grid-template-columns:minmax(0,1fr);gap:26px}}
 /* Autoplaying scene previews have no mouse or keyboard player interaction. */
 .media-frame iframe.looping-video{pointer-events:none}
 </style>
 </head>
 <body>
 <main class="page" id="top">
-  <div class="system-bar"><span>LAZY 3D / LAZY REALISM FX</span><span class="system-code">ENVIRONMENT EFFECTS / BLENDER</span></div>
-  <div class="locator"><span>PRODUCT OVERVIEW</span><span class="locator-track">SCENE DETAIL · WEATHER · MOTION</span></div>
   <header class="hero">
     <div class="hero-copy">
       <p class="hero-kicker">A little detail. A world of difference.</p>
       <h1><span class="brand-title">Lazy Realism FX</span></h1>
-      <p class="hero-lead">The small details make a scene feel real. Bring <strong>weather, motion and surface detail</strong> to your Blender projects with a collection of effects in one FX workspace.</p>
-      <div class="actions"><a class="ui-button primary" href="#geometry">Explore the effects</a><a class="ui-button" href="#showcase">See the difference</a></div>
-      <div class="chips"><span>Geometry Nodes</span><span>One-click shaders</span><span>40+ effects</span><span>Blender</span></div>
+      <p class="hero-lead">Bring <strong>weather, motion and surface detail</strong> to Blender scenes with a focused collection of procedural effects.</p>
     </div>
-    <!-- HERO: YouTube URL still needed. Replace this placeholder with the video-frame pattern below; keep --ratio:16/9 for the 1920×1080 trailer. -->
-    <div class="hero-media pending-media" style="--ratio:16/9"><div><div class="eyebrow">LAZY REALISM FX</div><p class="preview-title">One scene. More life.</p><p class="preview-detail">Weather · Motion · Surface detail</p></div></div>
+    <!-- HERO: replace this placeholder with the 1920×1080 YouTube trailer. -->
+    <div class="hero-media pending-media" style="--ratio:16/9"><div><p class="preview-title">One scene. More life.</p><p class="preview-detail">Weather · Motion · Surface detail</p></div></div>
   </header>
-  <nav class="nav" aria-label="Page sections"><a href="#overview">Overview</a><a href="#geometry">What's inside</a><a href="#shaders">Shaders</a><a href="#showcase">See the difference</a></nav>
 
-  <section class="section" id="overview">
-    <div class="section-heading"><div class="eyebrow">01 / A SCENE WITH LIFE</div><h2>Make the scene feel lived in.</h2><p>A breeze through the trees. Movement in the sky. The little signs of a world that keeps moving.</p></div>
-    <div class="overview-grid">
-<figure class="media-figure ">
-  <div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/168c7ed0e90096e4843b8953ff8b6ecd.gif" width="500" height="500" alt="Animated tree bending in the wind beside a lake." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Tree Wind</strong><span class="caption-detail">A little movement changes the whole scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-<div class="overview-copy"><h3>Details you can feel.</h3><p>A convincing environment is more than its main objects. Add the movement, traces and atmosphere that make those objects feel part of the world.</p><ul class="detail-list"><li><strong>Motion</strong>Wind, flying particles and life in the distance.</li><li><strong>Surface detail</strong>Moss, dirt, dust and the marks left by time.</li><li><strong>Atmosphere</strong>Small additions that give your scene a story.</li></ul></div></div>
-  </section>
+  <section class="section" id="geometry">
+    <div class="section-heading"><h2>What's inside.</h2><p>Lazy Realism FX includes 40+ assets divided into two focused collections: Geometry Nodes generators and one-click shaders.</p></div>
+    <div class="section-heading library-heading"><h2>Geometry Nodes Generators.</h2><p>Procedural systems for motion, atmosphere, scattering and physical interaction — built to add life to the scene with minimal setup.</p></div>
 
-  <section class="section" id="effects">
-    <div class="section-heading"><div class="eyebrow">02 / THE EFFECTS LIBRARY</div><h2>Improve your renders in seconds.</h2><p>Build on your scene with effects that make a visible difference.</p></div>
-<figure class="media-figure " id="effects-preview">
-  <div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/f27c41a30727a7a46bb6496f9c9258fa.jpg" width="2000" height="1000" alt="Iridescent oil stains on a road beside a weathered car and fallen leaves." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Oil Stains</strong><span class="caption-detail">Surface detail in a finished scene.</span></span><span class="media-type">SCENE RENDER</span></figcaption>
-</figure>
-<p class="intro-caption"><strong>More than 40 effects</strong> across procedural Geometry Nodes and one-click shaders bring atmosphere, detail and motion to your renders, without hours of setup.</p>
-    <div class="section-heading library-heading" id="geometry"><div class="eyebrow">GEOMETRY NODES</div><h2>What's inside.</h2><p>Procedural details for the ground, the sky and everything in between.</p></div>
-<article class="module">
-  <div class="module-heading"><h3>Physical Leaves</h3><p>Scatter leaves across your scene to add a natural layer of detail.</p></div>
-  <!-- Physical Leaves media stay stacked at every viewport width. -->
-    <div class="leaves-media-pair"><figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/e332fffc05a6cc795ff7b4c1688ed58e.gif" width="1000" height="500" alt="Physical Leaves scattered across the ground in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Physical Leaves</strong><span class="caption-detail">A natural layer of detail across the ground.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption></figure><div class="pending-media" style="--ratio:2000/1000"><div><p class="preview-title">Leaves in the scene</p><p class="preview-detail">Small details. A richer environment.</p></div></div></div>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>Dust &amp; Ashes</h3><p>Add floating particles that catch the light and give the air a sense of depth.</p></div>
-  <div class="media-stack"><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching warm light in front of a circular vent." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Flying Dust</strong><span class="caption-detail">Motion and atmosphere, right in the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-<figure class="media-figure compact-square">
-      <div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/346b61afe5f4ec7b80dbc7a8b2ef776b.gif" width="500" height="500" alt="Ash particles moving through the scene." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Ashes</strong><span class="caption-detail">Another layer of floating particles.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></div></article>
-<article class="module">
-  <div class="module-heading"><h3>Birds &amp; Insects</h3><p>Give the background a life of its own, with movement that makes the sky feel inhabited.</p></div>
-  <div class="media-stack"><figure class="media-figure square-scene">
-  <div class="media-frame" style="--ratio:1000/1000"><img src="https://assets.superhivemarket.com/cache/7bf5ed4030583c93d2d22c89b501f815.gif" width="1000" height="1000" alt="Birds flying above an autumn forest and a wooden cabin." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Birds</strong><span class="caption-detail">Life above the tree line.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure><div class="supplemental-grid"><figure class="media-figure ">
-      <div class="media-frame" style="--ratio:700/350"><img src="https://assets.superhivemarket.com/cache/00af8a6fb6319b9925f72f72b8db652a.gif" width="700" height="350" alt="Crawling movement among leaves on the ground." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Crawling</strong><span class="caption-detail">Movement close to the ground.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure><figure class="media-figure ">
-      <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/966e0faaaeae2bf00cb0681d36e15b8c.gif" width="1000" height="500" alt="A swarm in motion beside foliage and a stone arch." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Swarm</strong><span class="caption-detail">Small movements bring the air to life.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></div><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/4ee8d0c1f1f0680496271a667e6708c9.gif" width="1000" height="500" alt="Blender viewport showing birds above a cabin and the Lazy Realism FX interface." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Birds · Workflow</strong><span class="caption-detail">A look at the effect inside Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure><figure class="media-figure">
-  <div class="media-frame video-frame" style="--ratio:16/9"><iframe class="looping-video" tabindex="-1" src="https://www.youtube-nocookie.com/embed/lgOGxgcAwk4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=lgOGxgcAwk4&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Bird Formations · Showcase" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-  <figcaption><span><strong>Bird Formations · Showcase</strong><span class="caption-detail">Watch the formations in motion.</span></span><a class="watch-link" href="https://youtu.be/lgOGxgcAwk4" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
-</figure></div>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>Flying Airplanes</h3><p>Introduce distant movement and a sense of scale with airplanes crossing the sky.</p></div>
-  <figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/a56f68d273454e612d53993a281e587f.gif" width="1000" height="300" alt="Airplane flying through a cloudy sky." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Flying Airplanes</strong><span class="caption-detail">Movement across the sky.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>Moss &amp; Wear</h3><p>Give your environment a history. Pair natural growth with weathered edges and surface marks.</p></div>
-  <div class="media-stack"><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/d18c1ceaa6599b6658c707b0e84bf571.gif" width="1000" height="500" alt="Blender viewport showing worn edges and weathering on a concrete building." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Edge Wear</strong><span class="caption-detail">Follow the weathering workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/bf0e4322e6d5c6116fcf03f3bd0bf405.gif" width="1000" height="500" alt="Blender viewport showing vertical leak stains on a concrete building." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Leaks</strong><span class="caption-detail">Streaks and residue across an architectural surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure></div>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>Tracks &amp; Debris</h3><p>Leave traces of movement and add scattered detail to the ground.</p></div>
-  <div class="feature-note"><strong>Tell the story of a space.</strong> Tracks and debris help connect your objects to the environment around them. For surface marks, explore the <a href="#tire-marks">Tire Marks shader</a> below.</div>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>QX Snow</h3><p>Bring a winter layer to your scene with procedural snow.</p></div>
-  <div class="feature-note"><strong>A change of season.</strong> Add snow geometry to the environment, then refine the surface with the <a href="#snow-shader">Snow shader</a>.</div>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>3D Puddles</h3><p>Automatically generate volumetric puddle meshes on your mesh using a procedural algorithm.</p></div>
-  <figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/544ebb07ab4ebfd1bf04ddce795e6055.gif" width="1000" height="500" alt="A procedural puddle forming on an uneven road beside a car." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>3D Puddles</strong><span class="caption-detail">Procedural puddles with real volume.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure><p class="intro-caption">Each puddle is a <strong>three-dimensional mesh</strong>, shaped procedurally to fill your mesh.</p>
-</article>
-<article class="module" id="simulated-droplets"><div class="module-heading"><h3>Simulated Droplets</h3><p>Bring water droplets into motion and add another layer of detail to your scene.</p></div><figure class="media-figure ">
-      <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/fc709e058e1fff9a381e53177225cbce.gif" width="1000" height="300" alt="Simulated water droplets moving through the scene." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Simulated Droplets</strong><span class="caption-detail">Water detail in motion.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></article>
-<article class="module" id="spiderwebs">
-  <div class="module-heading"><h3>Spiderwebs</h3><p>Add delicate procedural webs to corners and surfaces for an extra layer of age, atmosphere and detail.</p></div>
-  <figure class="media-figure">
-    <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/e09d4b2256e87dfffa11a8ce7ba12790.gif" width="1000" height="300" alt="Procedural spiderwebs generated across a Blender scene." loading="lazy" decoding="async"></div>
-    <figcaption><span><strong>Spiderwebs</strong><span class="caption-detail">Fine procedural detail for abandoned and weathered environments.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-  </figure>
-</article>
-<div class="more-card"><h3>And many more.</h3><p>Keep building the scene with more procedural effects from the library.</p><ul class="effect-list"><li>Rain</li><li>Snow coverage</li><li>Wind</li><li>Tree movement</li><li>Foam &amp; slime</li><li>Droplets</li><li>Sand</li><li>Grass</li><li>Branches</li><li>Collisions</li></ul></div>
+    <article class="module" id="physical-leaves">
+      <div class="module-heading"><h3>Physical Leaves</h3><p>A natural layer of detail across the ground, driven by physics and built for convincing interaction with the environment.</p></div>
+      <div class="leaves-media-pair">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/e332fffc05a6cc795ff7b4c1688ed58e.gif" width="1000" height="500" alt="Physical Leaves scattered across the ground in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Physical Leaves</strong><span class="caption-detail">Natural detail across the ground.</span></span></figcaption></figure>
+        <div class="pending-media" style="--ratio:2000/1000"><div><p class="preview-title">Physical Leaves in the scene</p><p class="preview-detail">Physics · Collision · Ground interaction</p></div></div>
+      </div>
+      <ul class="feature-points"><li>Realistic Physics</li><li>Collision</li><li>Ground Scatter</li><li>Ground Leaves</li><li>Advanced Ground Collision</li><li>Advanced Landing Physics</li></ul>
+    </article>
+
+    <article class="module" id="flying-dust">
+      <div class="module-heading"><h3>Flying Dust &amp; Ashes</h3><p>Motion and atmosphere, right in the scene. Build a domain automatically or place it exactly where the effect is needed.</p></div>
+      <div class="media-stack">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching light in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Flying Dust</strong><span class="caption-detail">Atmospheric particles with procedural motion.</span></span></figcaption></figure>
+        <figure class="media-figure compact-square"><div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/346b61afe5f4ec7b80dbc7a8b2ef776b.gif" width="500" height="500" alt="Ash particles moving through a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Ashes</strong><span class="caption-detail">Domain and emitter-based ash effects.</span></span></figcaption></figure>
+      </div>
+      <ul class="feature-points"><li>One-click Automatic Domain</li><li>3D Cursor Placement</li><li>Realistic Motion</li><li>Collision</li></ul>
+    </article>
+
+    <article class="module" id="birds-insects">
+      <div class="module-heading"><h3>Birds &amp; Insects</h3><p>Populate the distance and foreground with procedural formations, drawn flight paths, crawling insects and animated swarms.</p></div>
+      <div class="media-stack">
+        <figure class="media-figure square-scene"><div class="media-frame" style="--ratio:1000/1000"><img src="https://assets.superhivemarket.com/cache/7bf5ed4030583c93d2d22c89b501f815.gif" width="1000" height="1000" alt="Birds flying above an autumn forest and cabin." loading="lazy" decoding="async"></div><figcaption><span><strong>Birds</strong><span class="caption-detail">Procedural flight and formation systems.</span></span></figcaption></figure>
+        <div class="supplemental-grid">
+          <figure class="media-figure"><div class="media-frame" style="--ratio:700/350"><img src="https://assets.superhivemarket.com/cache/00af8a6fb6319b9925f72f72b8db652a.gif" width="700" height="350" alt="Crawling insects moving across a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Crawling Insects</strong><span class="caption-detail">Surface-based procedural movement.</span></span></figcaption></figure>
+          <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/966e0faaaeae2bf00cb0681d36e15b8c.gif" width="1000" height="500" alt="An animated insect swarm in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Insect Swarm</strong><span class="caption-detail">Animated motion for atmospheric detail.</span></span></figcaption></figure>
+        </div>
+        <figure class="media-figure"><div class="media-frame video-frame" style="--ratio:2000/1000"><iframe class="looping-video" src="https://www.youtube-nocookie.com/embed/lgOGxgcAwk4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=lgOGxgcAwk4&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Bird Formations Showcase" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy" tabindex="-1"></iframe></div><figcaption><span><strong>Bird Formations · Showcase</strong><span class="caption-detail">Formation systems in a finished scene.</span></span><a class="watch-link" href="https://youtu.be/lgOGxgcAwk4" target="_blank" rel="noopener">Open video</a></figcaption></figure>
+      </div>
+      <ul class="feature-points"><li>One-click Domain Setup</li><li>Procedural Motion</li><li>Formation Systems</li><li>Draw Flight</li><li>Point of Interest</li><li>Crawling &amp; Swarm Presets</li></ul>
+    </article>
+
+    <article class="module" id="airplanes">
+      <div class="module-heading"><h3>Flying Airplanes</h3><p>Add distant movement and scale with a generator that automatically fits its domain to the scene.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/a56f68d273454e612d53993a281e587f.gif" width="1000" height="300" alt="Procedural airplanes flying across the sky." loading="lazy" decoding="async"></div><figcaption><span><strong>Flying Airplanes</strong><span class="caption-detail">Procedural flight paths and scene-scale motion.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Automatic Scene-fit Domain</li><li>Procedural Flight Paths</li><li>Simple Draw</li><li>Adjustable Amount</li></ul>
+    </article>
+
+    <article class="module" id="tree-wind">
+      <div class="module-heading"><h3>Tree Wind</h3><p>Natural procedural movement for vegetation, with smooth gusts and control over where the wind affects the mesh.</p></div>
+      <figure class="media-figure square-scene"><div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/168c7ed0e90096e4843b8953ff8b6ecd.gif" width="500" height="500" alt="Animated tree bending naturally in the wind." loading="lazy" decoding="async"></div><figcaption><span><strong>Tree Wind</strong><span class="caption-detail">Smooth procedural movement for vegetation.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Procedural Bend</li><li>Smooth Gusts</li><li>Vertex Group Masks</li><li>Tree &amp; Grass Wind</li></ul>
+    </article>
+
+    <article class="module" id="moss-scatter">
+      <div class="module-heading"><h3>Moss Scatter</h3><p>Scatter or draw animated moss across surfaces and keep it naturally connected to the scene.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Procedural moss scattered across a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Moss Scatter</strong><span class="caption-detail">Procedural growth with environmental interaction.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Scatter Moss</li><li>Draw Moss</li><li>Collision</li><li>Realistic Wind</li><li>Motion Effects</li></ul>
+    </article>
+
+    <article class="module" id="tracks-debris">
+      <div class="module-heading"><h3>Tracks &amp; Debris</h3><p>Create paths, ground impressions and scattered details that show where movement has passed through the scene.</p></div>
+      <div class="pending-media" style="--ratio:1000/300"><div><p class="preview-title">Tracks &amp; Debris</p><p class="preview-detail">Drawn paths · 3D impressions · Scattered detail</p></div></div>
+      <ul class="feature-points"><li>Drawn Paths</li><li>Footprints 3D</li><li>Tire Marks 3D</li><li>Snow &amp; Mud Modes</li></ul>
+    </article>
+
+    <article class="module" id="puddles-3d">
+      <div class="module-heading"><h3>3D Puddles</h3><p>Generate real volumetric puddle meshes that procedurally detect and fill low areas on the selected mesh.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/544ebb07ab4ebfd1bf04ddce795e6055.gif" width="1000" height="500" alt="A procedural volumetric puddle forming on an uneven road." loading="lazy" decoding="async"></div><figcaption><span><strong>3D Puddles</strong><span class="caption-detail">Procedural puddles with real volume.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Volumetric Mesh</li><li>Procedural Basin Detection</li><li>Automatic Surface Fill</li><li>Water Material Presets</li></ul>
+    </article>
+
+    <article class="module" id="simulated-droplets">
+      <div class="module-heading"><h3>Simulated Droplets</h3><p>Bring droplets into motion with a procedural surface system designed for close-up environmental detail.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/fc709e058e1fff9a381e53177225cbce.gif" width="1000" height="300" alt="Simulated water droplets moving through a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Simulated Droplets</strong><span class="caption-detail">Surface water detail in motion.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Scatter Droplets</li><li>Draw Droplets</li><li>Surface Simulation</li><li>Collision</li></ul>
+    </article>
+
+    <article class="module" id="spiderwebs">
+      <div class="module-heading"><h3>Spiderwebs</h3><p>Draw controller zones directly over scene surfaces and generate adjustable procedural webs between them.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/e09d4b2256e87dfffa11a8ce7ba12790.gif" width="1000" height="300" alt="Procedural spiderwebs generated across a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Spiderwebs</strong><span class="caption-detail">Fine procedural detail for aged environments.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Draw Controller Zones</li><li>Surface Snapping</li><li>Collider Support</li><li>Shape &amp; Tear Controls</li></ul>
+    </article>
+
+    <div class="more-card"><h3>And many more.</h3><p>More generators are included for weather, ground interaction, atmospheric motion and scene detail.</p><ul class="effect-list"><li>Ground Leaves</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Procedural Rain</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Grass Wind</li><li>Moisture Specks</li><li>Dripping</li><li>Dynamic Sparkles</li><li>Spray</li></ul></div>
   </section>
 
   <section class="section" id="shaders">
-    <div class="section-heading library-heading"><div class="eyebrow">WHAT'S INSIDE / MATERIALS</div><h2>One-click shaders.</h2><p>The finishing layer: dirt, growth, residue and weathering. Apply a shader, adjust its look and bring new texture to your surfaces.</p></div>
-<figure class="media-figure shader-overview">
-      <div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/831a8cd15561f8af6af249065cc0b139.jpg" width="2000" height="1000" alt="Three sculptures showing Pro Moss, Pro Dust and Moss shaders." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Pro Shaders</strong><span class="caption-detail">Pro Moss · Pro Dust · Moss</span></span><span class="media-type">SHADER SHOWCASE</span></figcaption>
-    </figure><article class="module">
-  <div class="module-heading"><h3>Ground Dirt</h3><p>Bring natural dirt and variation to the ground, so it feels connected to the rest of your scene.</p></div>
-  <figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Blender viewport showing ground dirt and scattered surface details beside a wall." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Ground Shader</strong><span class="caption-detail">Surface detail, demonstrated in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-</article>
-<article class="module">
-  <div class="module-heading"><h3>Moss</h3><p>Add natural growth that gives your surfaces a sense of age and place.</p></div>
-  <div class="media-stack"><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Green moss covering a weathered surface beside fallen leaves." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Moss</strong><span class="caption-detail">A closer look at growth across the scene.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-<figure class="media-figure compact-preview">
-      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/7a64824962528edcad98b74acc6c9208.gif" width="700" height="420" alt="Blender workflow demonstrating the Pro Moss shader." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Pro Moss</strong><span class="caption-detail">Explore the Pro Moss workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure><figure class="media-figure compact-preview">
-      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/39b87dc46d06631100edf27ffcc3208e.gif" width="700" height="420" alt="Blender workflow demonstrating moss streaks on a sculpture." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Moss Leaks</strong><span class="caption-detail">A different look at moss on a surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></div></article>
-<article class="module" id="snow-shader">
-  <div class="module-heading"><h3>Snow</h3><p>Finish a winter scene with a layer of snow on your materials.</p></div>
-  <figure class="media-figure ">
-      <div class="media-frame" style="--ratio:1000/600"><img src="https://assets.superhivemarket.com/cache/df9c57a29c63fd6a6aea4b60d3174695.gif" width="1000" height="600" alt="Blender viewport showing the snow shader on rocky ground and a fallen branch." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Snow Shader</strong><span class="caption-detail">A winter surface, demonstrated in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></article>
-<article class="module">
-  <div class="module-heading"><h3>Dust</h3><p>Bring a settled, lived-in quality to objects with a layer of surface dust.</p></div>
-  <div class="media-stack"><figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/6a1a16463f0ef58bb2bad0053aefdcd4.gif" width="1000" height="500" alt="Blender viewport showing dust on a vintage television and lantern." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Dust Shader · Workflow</strong><span class="caption-detail">From the FX library to the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-<figure class="media-figure compact-preview">
-      <div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/6f5fbbca751c0b086e1c1643dc900af2.gif" width="700" height="420" alt="Blender workflow demonstrating the Pro Dust shader." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Pro Dust</strong><span class="caption-detail">Explore the Pro Dust workflow in Blender.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></div></article>
-<article class="module" id="tire-marks">
-  <div class="module-heading"><h3>Tire Marks</h3><p>Add the traces of traffic to roads and ground surfaces.</p></div>
-  <figure class="media-figure ">
-  <div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/a7978dbb9566eee270972fbbcf1d368c.gif" width="1000" height="500" alt="Blender viewport showing tire marks and dirt on a road beside a car." loading="lazy" decoding="async"></div>
-  <figcaption><span><strong>Tire Shader · Workflow</strong><span class="caption-detail">Surface marks in the Blender viewport.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-</figure>
-</article>
-<article class="module" id="quick-puddles"><div class="module-heading"><h3>Quick Puddles</h3><p>Add puddle reflections and wet detail to your surfaces.</p></div><figure class="media-figure ">
-      <div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/8c1002468860d8dba5facc7587c76acd.gif" width="1000" height="300" alt="Reflective puddles across a paved surface." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>Quick Puddles</strong><span class="caption-detail">Reflected detail across a wet surface.</span></span><span class="media-type">ANIMATED PREVIEW</span></figcaption>
-    </figure></article><article class="module">
-  <div class="module-heading"><h3>Oil Puddles &amp; Oil Stains</h3><p>Add oily residue and iridescent surface detail to your environment.</p></div>
-  <div class="feature-note"><strong>A small detail with a visible impact.</strong> See Oil Stains in the <a href="#effects-preview">finished scene above ↑</a>.</div>
-</article>
-<div class="more-card"><h3>And many more.</h3><p>Dirt particles, rust, scratches and fingerprints — more ways to finish your surfaces.</p><figure class="media-figure ">
-      <div class="media-frame" style="--ratio:4000/1000"><img src="https://assets.superhivemarket.com/cache/757624428fe0ba0dd579e1a1997ae9c7.jpg" width="4000" height="1000" alt="Four panels demonstrating dirt particles, quick rust, scratches and fingerprints." loading="lazy" decoding="async"></div>
-      <figcaption><span><strong>More shaders</strong><span class="caption-detail">Dirt Particles · Quick Rust · Scratches · Fingerprints</span></span><span class="media-type">SHADER SHOWCASE</span></figcaption>
-    </figure><ul class="effect-list"><li>Dirt Particles</li><li>Quick Rust</li><li>Scratches</li><li>Fingerprints</li></ul></div>
+    <div class="section-heading library-heading"><h2>One-click Shaders.</h2><p>Apply surface effects in seconds, then adjust the material to match the scale, lighting and story of the scene.</p></div>
+
+    <article class="module" id="moss-shaders">
+      <div class="module-heading"><h3>Moss</h3><p>Build natural growth and damp age into surfaces with two complementary procedural moss systems.</p></div>
+      <div class="moss-pair">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/7a64824962528edcad98b74acc6c9208.gif" width="2000" height="1000" alt="Pro Moss procedural shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Moss</strong><span class="caption-detail">Layered procedural growth.</span></span></figcaption></figure>
+        <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/39b87dc46d06631100edf27ffcc3208e.gif" width="2000" height="1000" alt="Moss Leaks procedural shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Moss Leaks</strong><span class="caption-detail">Growth shaped by damp streaks and runoff.</span></span></figcaption></figure>
+      </div>
+      <ul class="feature-points"><li>One-click Application</li><li>Procedural Coverage</li><li>Adjustable Growth</li><li>Leak-driven Masks</li></ul>
+    </article>
+
+    <article class="module" id="dust-shaders">
+      <div class="module-heading"><h3>Dust</h3><p>Add either a focused dust material or a layered Pro Dust treatment without cropping media of different proportions.</p></div>
+      <div class="mixed-media-grid">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/6a1a16463f0ef58bb2bad0053aefdcd4.gif" width="1000" height="500" alt="Dust shader workflow in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Dust Shader</strong><span class="caption-detail">Fast material-level surface dust.</span></span></figcaption></figure>
+        <figure class="media-figure"><div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/6f5fbbca751c0b086e1c1643dc900af2.gif" width="700" height="420" alt="Pro Dust layered shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Dust</strong><span class="caption-detail">A more advanced procedural dust layer.</span></span></figcaption></figure>
+      </div>
+      <ul class="feature-points"><li>One-click Application</li><li>Procedural Layering</li><li>Adjustable Coverage</li><li>Material Blending</li></ul>
+    </article>
+
+    <article class="module" id="pro-dirt">
+      <div class="module-heading"><h3>Pro Dirt</h3><p>Add directional dirt and natural surface variation with a shader supported by triplanar projection.</p></div>
+      <figure class="media-figure"><div class="media-frame video-frame" style="--ratio:16/9"><iframe class="looping-video" src="https://www.youtube-nocookie.com/embed/CW756xvt0Ds?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CW756xvt0Ds&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Pro Dirt Video" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy" tabindex="-1"></iframe></div><figcaption><span><strong>Pro Dirt</strong><span class="caption-detail">Procedural dirt with projection controls.</span></span><a class="watch-link" href="https://youtu.be/CW756xvt0Ds" target="_blank" rel="noopener">Open video</a></figcaption></figure>
+      <ul class="feature-points"><li>Triplanar Projection</li><li>Procedural Coverage</li><li>Material Blending</li><li>One-click Setup</li></ul>
+    </article>
+
+    <article class="module" id="snow-shader">
+      <div class="module-heading"><h3>Snow Shader</h3><p>Cover surfaces with a procedural winter layer that responds to their form and orientation.</p></div>
+      <figure class="media-figure compact-preview"><div class="media-frame" style="--ratio:1000/600"><img src="https://assets.superhivemarket.com/cache/df9c57a29c63fd6a6aea4b60d3174695.gif" width="1000" height="600" alt="Procedural snow shader on a Blender object." loading="lazy" decoding="async"></div><figcaption><span><strong>Snow Shader</strong><span class="caption-detail">A fast procedural winter surface.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Procedural Coverage</li><li>Form-aware Masking</li><li>Adjustable Snow</li><li>One-click Setup</li></ul>
+    </article>
+
+    <article class="module" id="ground-dirt">
+      <div class="module-heading"><h3>Ground Dirt</h3><p>Connect the ground to the rest of the scene with procedural dirt, breakup and natural color variation.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Procedural Ground Dirt shader in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Ground Dirt</strong><span class="caption-detail">Natural breakup for terrain and ground surfaces.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Procedural Ground Mask</li><li>Natural Variation</li><li>Adjustable Dirt</li><li>Fast Setup</li></ul>
+    </article>
+
+    <article class="module" id="leaks-edge-wear">
+      <div class="module-heading"><h3>Leaks &amp; Edge Wear</h3><p>Add the directional traces of moisture first, then expose worn edges to make the material feel used and aged.</p></div>
+      <div class="supplemental-grid">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/bf0e4322e6d5c6116fcf03f3bd0bf405.gif" width="1000" height="500" alt="Procedural leak streaks on a Blender material." loading="lazy" decoding="async"></div><figcaption><span><strong>Leaks</strong><span class="caption-detail">Directional streaks and runoff.</span></span></figcaption></figure>
+        <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/d18c1ceaa6599b6658c707b0e84bf571.gif" width="1000" height="500" alt="Procedural edge wear on a Blender material." loading="lazy" decoding="async"></div><figcaption><span><strong>Edge Wear</strong><span class="caption-detail">Geometry-aware worn edges.</span></span></figcaption></figure>
+      </div>
+      <ul class="feature-points"><li>Directional Leaks</li><li>Geometry-aware Edges</li><li>Custom Shader Input</li><li>Adjustable Masks</li></ul>
+    </article>
+
+    <article class="module" id="tire-marks">
+      <div class="module-heading"><h3>Tire Marks</h3><p>Draw a smooth path and build convincing traffic traces directly into the ground material.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/a7978dbb9566eee270972fbbcf1d368c.gif" width="1000" height="500" alt="Tire Marks shader workflow in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Tire Marks</strong><span class="caption-detail">Path-driven marks for roads and ground.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Drawn Path</li><li>Smooth Curves</li><li>Material Integration</li><li>Adjustable Scale</li></ul>
+    </article>
+
+    <article class="module" id="quick-puddles">
+      <div class="module-heading"><h3>Quick Puddles</h3><p>Add reflective wet areas quickly, then paint a custom mask where more control is needed.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/8c1002468860d8dba5facc7587c76acd.gif" width="1000" height="300" alt="Quick Puddles shader applied to a ground surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Quick Puddles</strong><span class="caption-detail">Wet detail with a paintable custom mask.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>One-click Puddles</li><li>Surface Flatness</li><li>Custom Paint Mask</li><li>Reflection Controls</li></ul>
+    </article>
+
+    <article class="module" id="oil-stains">
+      <div class="module-heading"><h3>Oil Stains</h3><p>Add iridescent oil residue to roads and hard surfaces, with procedural placement and material integration.</p></div>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/f27c41a30727a7a46bb6496f9c9258fa.jpg" width="2000" height="1000" alt="Iridescent oil stains on a road beside a weathered car." loading="lazy" decoding="async"></div><figcaption><span><strong>Oil Stains</strong><span class="caption-detail">Iridescent residue for roads and hard surfaces.</span></span></figcaption></figure>
+      <ul class="feature-points"><li>Procedural Placement</li><li>Iridescent Material</li><li>Ground Integration</li><li>Adjustable Stains</li></ul>
+    </article>
+
+    <div class="more-card"><h3>And many more.</h3><p>Finish the material with additional shaders for rust, scratches, fingerprints, footprints and small surface details.</p>
+      <div class="media-stack more-media">
+        <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/831a8cd15561f8af6af249065cc0b139.jpg" width="2000" height="1000" alt="A selection of procedural shaders included in Lazy Realism FX." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Shaders</strong><span class="caption-detail">Layered materials for a finished surface.</span></span></figcaption></figure>
+        <figure class="media-figure"><div class="media-frame" style="--ratio:4000/1000"><img src="https://assets.superhivemarket.com/cache/757624428fe0ba0dd579e1a1997ae9c7.jpg" width="4000" height="1000" alt="Additional shaders included in Lazy Realism FX." loading="lazy" decoding="async"></div><figcaption><span><strong>More Shaders</strong><span class="caption-detail">More ways to finish the surface.</span></span></figcaption></figure>
+      </div>
+      <ul class="effect-list"><li>Pro Rust</li><li>Footprints</li><li>Fingerprints</li><li>Dirt Particles</li><li>Scratches</li><li>Rust</li><li>Dirt in Edges</li></ul>
+    </div>
   </section>
 
-  <section class="section" id="showcase">
-    <div class="section-heading library-heading"><div class="eyebrow">03 / FROM SETUP TO RESULT</div><h2>See the difference.</h2><p>Watch Pro Dirt in action, then make the effect your own.</p></div>
-<figure class="media-figure">
-  <div class="media-frame video-frame" style="--ratio:16/9"><iframe class="looping-video" tabindex="-1" src="https://www.youtube-nocookie.com/embed/CW756xvt0Ds?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CW756xvt0Ds&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Pro Dirt · Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-  <figcaption><span><strong>Pro Dirt · Video</strong><span class="caption-detail">See the surface effect and workflow in motion.</span></span><a class="watch-link" href="https://youtu.be/CW756xvt0Ds" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
-</figure>
-<div class="workflow-steps"><div class="workflow-step"><span>01</span><h3>Choose.</h3><p>Pick the effect your scene needs.</p></div><div class="workflow-step"><span>02</span><h3>Adjust.</h3><p>Tune the look to fit your environment.</p></div><div class="workflow-step"><span>03</span><h3>Create.</h3><p>Bring the details together in your render.</p></div></div>
-  </section>
-  <section class="closing"><div class="eyebrow">LAZY REALISM FX / BLENDER</div><h2>Give your scene<br>the finishing details.</h2><p>Bring weather, motion and atmosphere into your next Blender project.</p><div class="actions"><a class="ui-button primary" href="#geometry">Explore the toolkit</a></div></section>
-  <footer><span>LAZY 3D / LAZY REALISM FX</span><a href="#top">Back to top ↑</a></footer>
+  <section class="closing" id="showcase"><h2>See the difference.</h2><p>Choose the effect, adjust it to the scene and create a render with more atmosphere, motion and detail.</p><div class="workflow-steps"><div class="workflow-step"><h3>Choose.</h3><p>Pick the effect your scene needs.</p></div><div class="workflow-step"><h3>Adjust.</h3><p>Tune the look to fit your environment.</p></div><div class="workflow-step"><h3>Create.</h3><p>Bring the details together in the final render.</p></div></div></section>
+  <footer><span>LAZY REALISM FX</span><span>LAZY3D · 2026</span></footer>
 </main>
 </body>
 </html>
