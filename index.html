@@ -38,6 +38,7 @@ body:after{opacity:.7;background-image:radial-gradient(circle at 11% 14%,transpa
 @media(max-width:760px){.supplemental-grid{grid-template-columns:minmax(0,1fr);gap:26px}}
 /* Autoplaying scene previews have no mouse or keyboard player interaction. */
 .media-frame iframe.looping-video{pointer-events:none}
+.tree-wind-video{width:100%;max-width:1000px;margin:28px auto 0}.click-to-play-frame{cursor:pointer;background:#141414}.click-to-play-frame iframe{pointer-events:none}.video-start-button{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:pointer}.video-start-button:focus-visible{outline:2px solid #fff;outline-offset:-6px}.video-start-button:after{content:"";position:absolute;left:50%;top:50%;width:54px;height:54px;border-radius:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.58);box-shadow:0 0 0 1px rgba(255,255,255,.48),0 10px 30px rgba(0,0,0,.24);transition:opacity .2s ease,transform .2s ease}.video-start-button:before{content:"";position:absolute;z-index:1;left:calc(50% + 2px);top:50%;transform:translate(-50%,-50%);border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff;transition:opacity .2s ease}.click-to-play-frame:hover .video-start-button:after{transform:translate(-50%,-50%) scale(1.06)}.click-to-play-frame.is-playing .video-start-button{pointer-events:none}.click-to-play-frame.is-playing .video-start-button:before,.click-to-play-frame.is-playing .video-start-button:after{opacity:0}.click-caption{justify-content:center!important;text-align:center}.click-caption strong{font-size:13px!important}
 </style>
 </head>
 <body>
@@ -107,6 +108,13 @@ body:after{opacity:.7;background-image:radial-gradient(circle at 11% 14%,transpa
         <figure class="media-figure"><div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/168c7ed0e90096e4843b8953ff8b6ecd.gif" width="500" height="500" alt="Animated tree bending naturally in the wind." loading="lazy" decoding="async"></div></figure>
         <div class="side-feature-copy"><h3>Tree Wind</h3><p>Natural procedural movement for vegetation, with smooth gusts and control over where the wind affects the mesh.</p><ul class="feature-points"><li>Procedural Bend</li><li>Smooth Gusts</li><li>Vertex Group Masks</li><li>Tree &amp; Grass Wind</li></ul></div>
       </div>
+      <figure class="media-figure tree-wind-video">
+        <div class="media-frame video-frame click-to-play-frame" style="--ratio:2000/1000">
+          <iframe id="tree-wind-vimeo" src="https://player.vimeo.com/video/1234377167?autoplay=0&amp;muted=1&amp;loop=1&amp;autopause=0&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1&amp;dnt=1&amp;api=1&amp;player_id=tree-wind-vimeo" title="Tree Wind comparison video" allow="autoplay; fullscreen; picture-in-picture" loading="lazy" tabindex="-1"></iframe>
+          <button class="video-start-button" type="button" aria-label="Play the Tree Wind comparison video"></button>
+        </div>
+        <figcaption class="click-caption"><span><strong>Click to see the difference</strong></span></figcaption>
+      </figure>
     </article>
 
     <article class="module" id="moss-scatter">
@@ -222,5 +230,20 @@ body:after{opacity:.7;background-image:radial-gradient(circle at 11% 14%,transpa
   <footer><span>LAZY REALISM FX</span><span>LAZY3D · 2026</span></footer>
   <div class="credits"><p>Moss textures are CC0 assets from ambientCG.</p><p>Additional help with the Moss, Sparkles, Spiderwebs and Dripping generators was provided by Nodeworks — Konstantin Feyer.</p></div>
 </main>
+<script>
+document.querySelectorAll('.click-to-play-frame').forEach(function(frame){
+  var iframe=frame.querySelector('iframe');
+  var button=frame.querySelector('.video-start-button');
+  if(!iframe||!button)return;
+  button.addEventListener('click',function(){
+    var target='https://player.vimeo.com';
+    iframe.contentWindow.postMessage(JSON.stringify({method:'setVolume',value:0}),target);
+    iframe.contentWindow.postMessage(JSON.stringify({method:'play'}),target);
+    frame.classList.add('is-playing');
+    button.setAttribute('aria-hidden','true');
+    button.setAttribute('tabindex','-1');
+  });
+});
+</script>
 </body>
 </html>
