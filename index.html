@@ -30,14 +30,14 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 /* Star layers: each loop travels an exact multiple of its tile size, so it never jumps. */
 .fx-s1{background-image:radial-gradient(circle,rgba(0,0,0,.12) 1px,transparent 1.25px);background-size:18px 18px;animation:fx-drift-1 90s linear infinite}
 .fx-s2{background-image:radial-gradient(circle,rgba(0,0,0,.18) 1.3px,transparent 1.75px);background-size:74px 74px;background-position:29px 17px;animation:fx-drift-2 100s linear infinite}
-.fx-s3{background-image:radial-gradient(circle,rgba(0,0,0,.24) 1.65px,transparent 2.15px);background-size:211px 211px;background-position:83px 61px;animation:fx-drift-3 140s linear infinite}
+.fx-s3{background-image:radial-gradient(circle,rgba(0,0,0,.18) 1.65px,transparent 2.15px);background-size:211px 211px;background-position:83px 61px;animation:fx-drift-3 140s linear infinite}
 @keyframes fx-drift-1{to{transform:translate3d(-72px,-36px,0)}}
 @keyframes fx-drift-2{to{transform:translate3d(-148px,-74px,0)}}
 @keyframes fx-drift-3{to{transform:translate3d(-422px,-211px,0)}}
 /* Beacons: sparse, slightly larger dots that fade in and out. */
 .fx-bg .fx-tw{right:0;bottom:0;opacity:0;will-change:opacity}
-.fx-tw1{background-image:radial-gradient(circle,rgba(0,0,0,.3) 1.8px,transparent 2.4px);background-size:263px 263px;background-position:140px 90px;animation:fx-twinkle 7s ease-in-out infinite}
-.fx-tw2{background-image:radial-gradient(circle,rgba(0,0,0,.26) 1.6px,transparent 2.2px);background-size:337px 337px;background-position:40px 210px;animation:fx-twinkle 9s ease-in-out -4s infinite}
+.fx-tw1{background-image:radial-gradient(circle,rgba(0,0,0,.225) 1.8px,transparent 2.4px);background-size:263px 263px;background-position:140px 90px;animation:fx-twinkle 7s ease-in-out infinite}
+.fx-tw2{background-image:radial-gradient(circle,rgba(0,0,0,.195) 1.6px,transparent 2.2px);background-size:337px 337px;background-position:40px 210px;animation:fx-twinkle 9s ease-in-out -4s infinite}
 @keyframes fx-twinkle{0%,100%{opacity:0}50%{opacity:1}}
 /* Cursor interaction (desktop only, see script at the end):
    - .fx-reveal: the blueprint grid lights up in a soft circle around the cursor
@@ -108,7 +108,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="flying-dust">
       <div class="module-heading"><h3>Flying Dust</h3><p>Motion and atmosphere, right in the scene. Build a domain automatically or place it exactly where the effect is needed.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching light in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Flying Dust</strong><span class="caption-detail">Atmospheric particles with procedural motion.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/b00a9f18bb7c223cd195181f84144c78.gif" width="1000" height="300" alt="Flying dust particles catching light in a Blender scene." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>One-click Automatic Domain</li><li>3D Cursor Placement</li><li>Realistic Motion</li><li>Collision</li></ul>
       <div class="side-feature compact-side-feature">
         <figure class="media-figure"><div class="media-frame" style="--ratio:500/500"><img src="https://assets.superhivemarket.com/cache/346b61afe5f4ec7b80dbc7a8b2ef776b.gif" width="500" height="500" alt="Ash particles moving through a Blender scene." loading="lazy" decoding="async"></div></figure>
@@ -118,7 +118,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="dust-on-object">
       <div class="module-heading"><h3>Dust on Object</h3><p>Add procedural dust directly to selected objects, using either a fast setup or a more detailed surface treatment.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/0046daa10d02045cbc4d4f2c25c91616.jpg" width="2000" height="1000" alt="Dust on Object generator applied to objects in a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Dust on Object</strong><span class="caption-detail">Procedural dust placed directly across object surfaces.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/0046daa10d02045cbc4d4f2c25c91616.jpg" width="2000" height="1000" alt="Dust on Object generator applied to objects in a Blender scene." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>One-click Setup</li><li>Fast Dust Mode</li><li>Detailed Dust Mode</li><li>Object-based Placement</li></ul>
     </article>
 
@@ -139,7 +139,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="airplanes">
       <div class="module-heading"><h3>Flying Airplanes</h3><p>Add distant movement and scale with a generator that automatically fits its domain to the scene.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/a56f68d273454e612d53993a281e587f.gif" width="1000" height="300" alt="Procedural airplanes flying across the sky." loading="lazy" decoding="async"></div><figcaption><span><strong>Flying Airplanes</strong><span class="caption-detail">Procedural flight paths and scene-scale motion.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/a56f68d273454e612d53993a281e587f.gif" width="1000" height="300" alt="Procedural airplanes flying across the sky." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Automatic Scene-fit Domain</li><li>Procedural Flight Paths</li><li>Simple Draw</li><li>Adjustable Amount</li></ul>
     </article>
 
@@ -159,25 +159,25 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="moss-scatter">
       <div class="module-heading"><h3>Moss Scatter</h3><p>Scatter or draw animated moss across surfaces and keep it naturally connected to the scene.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Procedural moss scattered across a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Moss Scatter</strong><span class="caption-detail">Procedural growth with environmental interaction.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e675093b2431b9fe5181dc2b0b88d6ef.gif" width="1000" height="500" alt="Procedural moss scattered across a surface." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Scatter Moss</li><li>Draw Moss</li><li>Collision</li><li>Realistic Wind</li><li>Motion Effects</li></ul>
     </article>
 
     <article class="module" id="puddles-3d">
       <div class="module-heading"><h3>3D Puddles</h3><p>Generate real volumetric puddle meshes that procedurally detect and fill low areas on the selected mesh.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/544ebb07ab4ebfd1bf04ddce795e6055.gif" width="1000" height="500" alt="A procedural volumetric puddle forming on an uneven road." loading="lazy" decoding="async"></div><figcaption><span><strong>3D Puddles</strong><span class="caption-detail">Procedural puddles with real volume.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/544ebb07ab4ebfd1bf04ddce795e6055.gif" width="1000" height="500" alt="A procedural volumetric puddle forming on an uneven road." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Volumetric Mesh</li><li>Procedural Basin Detection</li><li>Automatic Surface Fill</li><li>Water Material Presets</li></ul>
     </article>
 
     <article class="module" id="simulated-droplets">
       <div class="module-heading"><h3>Simulated Droplets</h3><p>Bring droplets into motion with a procedural surface system designed for close-up environmental detail.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/fc709e058e1fff9a381e53177225cbce.gif" width="1000" height="300" alt="Simulated water droplets moving through a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Simulated Droplets</strong><span class="caption-detail">Surface water detail in motion.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/fc709e058e1fff9a381e53177225cbce.gif" width="1000" height="300" alt="Simulated water droplets moving through a Blender scene." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Scatter Droplets</li><li>Draw Droplets</li><li>Surface Simulation</li><li>Collision</li></ul>
     </article>
 
     <article class="module" id="spiderwebs">
       <div class="module-heading"><h3>Spiderwebs</h3><p>Draw controller zones directly over scene surfaces and generate adjustable procedural webs between them.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/e09d4b2256e87dfffa11a8ce7ba12790.gif" width="1000" height="300" alt="Procedural spiderwebs generated across a Blender scene." loading="lazy" decoding="async"></div><figcaption><span><strong>Spiderwebs</strong><span class="caption-detail">Fine procedural detail for aged environments.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/e09d4b2256e87dfffa11a8ce7ba12790.gif" width="1000" height="300" alt="Procedural spiderwebs generated across a Blender scene." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Draw Controller Zones</li><li>Surface Snapping</li><li>Collider Support</li><li>Shape &amp; Tear Controls</li></ul>
     </article>
 
@@ -189,7 +189,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
     <figure class="media-figure shader-intro-media"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/831a8cd15561f8af6af249065cc0b139.jpg" width="2000" height="1000" alt="A selection of procedural shaders included in Lazy Realism FX." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Shaders</strong><span class="caption-detail">Layered shader materials for a finished surface.</span></span></figcaption></figure>
 
     <article class="module" id="moss-shaders">
-      <div class="module-heading"><h3>Moss</h3><p>Build natural growth and damp age into surfaces with two complementary procedural moss systems.</p></div>
+      <div class="module-heading"><h3>Moss</h3></div>
       <div class="moss-pair">
         <figure class="media-figure"><div class="media-frame clean-media" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/7a64824962528edcad98b74acc6c9208.gif" width="700" height="420" alt="Pro Moss procedural shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Moss</strong><span class="caption-detail">Layered procedural growth.</span></span></figcaption></figure>
         <figure class="media-figure"><div class="media-frame clean-media" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/39b87dc46d06631100edf27ffcc3208e.gif" width="700" height="420" alt="Moss Leaks procedural shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Moss Leaks</strong><span class="caption-detail">Growth shaped by damp streaks and runoff.</span></span></figcaption></figure>
@@ -198,7 +198,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
     </article>
 
     <article class="module" id="dust-shaders">
-      <div class="module-heading"><h3>Dust</h3><p>Add either a focused dust material or a layered Pro Dust treatment without cropping media of different proportions.</p></div>
+      <div class="module-heading"><h3>Dust</h3></div>
       <div class="mixed-media-grid">
         <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/6a1a16463f0ef58bb2bad0053aefdcd4.gif" width="1000" height="500" alt="Dust shader workflow in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Dust Shader</strong><span class="caption-detail">Fast material-level surface dust.</span></span></figcaption></figure>
         <figure class="media-figure"><div class="media-frame" style="--ratio:700/420"><img src="https://assets.superhivemarket.com/cache/6f5fbbca751c0b086e1c1643dc900af2.gif" width="700" height="420" alt="Pro Dust layered shader applied to a surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Pro Dust</strong><span class="caption-detail">A more advanced procedural dust layer.</span></span></figcaption></figure>
@@ -208,7 +208,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="pro-dirt">
       <div class="module-heading"><h3>Pro Dirt</h3><p>Add directional dirt and natural surface variation with a shader supported by triplanar projection.</p></div>
-      <figure class="media-figure"><div class="media-frame video-frame" style="--ratio:16/9"><iframe class="looping-video" src="https://www.youtube-nocookie.com/embed/CW756xvt0Ds?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CW756xvt0Ds&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Pro Dirt Video" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy" tabindex="-1"></iframe></div><figcaption><span><strong>Pro Dirt</strong><span class="caption-detail">Procedural dirt with projection controls.</span></span><a class="watch-link" href="https://youtu.be/CW756xvt0Ds" target="_blank" rel="noopener">Open video</a></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame video-frame" style="--ratio:16/9"><iframe class="looping-video" src="https://www.youtube-nocookie.com/embed/CW756xvt0Ds?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CW756xvt0Ds&amp;controls=0&amp;playsinline=1&amp;disablekb=1&amp;fs=0" title="Pro Dirt Video" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy" tabindex="-1"></iframe></div></figure>
       <ul class="feature-points"><li>Triplanar Projection</li><li>Procedural Coverage</li><li>Material Blending</li><li>One-click Setup</li></ul>
     </article>
 
@@ -221,7 +221,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="ground-dirt">
       <div class="module-heading"><h3>Ground Dirt</h3><p>Connect the ground to the rest of the scene with procedural dirt, breakup and natural color variation.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Procedural Ground Dirt shader in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Ground Dirt</strong><span class="caption-detail">Natural breakup for terrain and ground surfaces.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/e4e6f740faa0f6936c679a1435ba70f2.gif" width="1000" height="500" alt="Procedural Ground Dirt shader in Blender." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Procedural Ground Mask</li><li>Natural Variation</li><li>Adjustable Dirt</li><li>Fast Setup</li></ul>
     </article>
 
@@ -236,19 +236,19 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 
     <article class="module" id="tire-marks">
       <div class="module-heading"><h3>Tire Marks</h3><p>Draw a smooth path and build convincing traffic traces directly into the ground material.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/a7978dbb9566eee270972fbbcf1d368c.gif" width="1000" height="500" alt="Tire Marks shader workflow in Blender." loading="lazy" decoding="async"></div><figcaption><span><strong>Tire Marks</strong><span class="caption-detail">Path-driven marks for roads and ground.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/500"><img src="https://assets.superhivemarket.com/cache/a7978dbb9566eee270972fbbcf1d368c.gif" width="1000" height="500" alt="Tire Marks shader workflow in Blender." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Drawn Path</li><li>Smooth Curves</li><li>Material Integration</li><li>Adjustable Scale</li></ul>
     </article>
 
     <article class="module" id="quick-puddles">
       <div class="module-heading"><h3>Quick Puddles</h3><p>Add reflective wet areas quickly, then paint a custom mask where more control is needed.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/8c1002468860d8dba5facc7587c76acd.gif" width="1000" height="300" alt="Quick Puddles shader applied to a ground surface." loading="lazy" decoding="async"></div><figcaption><span><strong>Quick Puddles</strong><span class="caption-detail">Wet detail with a paintable custom mask.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:1000/300"><img src="https://assets.superhivemarket.com/cache/8c1002468860d8dba5facc7587c76acd.gif" width="1000" height="300" alt="Quick Puddles shader applied to a ground surface." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>One-click Puddles</li><li>Surface Flatness</li><li>Custom Paint Mask</li><li>Reflection Controls</li></ul>
     </article>
 
     <article class="module" id="oil-stains">
       <div class="module-heading"><h3>Oil Stains</h3><p>Add iridescent oil residue to roads and hard surfaces, with procedural placement and material integration.</p></div>
-      <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/f27c41a30727a7a46bb6496f9c9258fa.jpg" width="2000" height="1000" alt="Iridescent oil stains on a road beside a weathered car." loading="lazy" decoding="async"></div><figcaption><span><strong>Oil Stains</strong><span class="caption-detail">Iridescent residue for roads and hard surfaces.</span></span></figcaption></figure>
+      <figure class="media-figure"><div class="media-frame" style="--ratio:2000/1000"><img src="https://assets.superhivemarket.com/cache/f27c41a30727a7a46bb6496f9c9258fa.jpg" width="2000" height="1000" alt="Iridescent oil stains on a road beside a weathered car." loading="lazy" decoding="async"></div></figure>
       <ul class="feature-points"><li>Procedural Placement</li><li>Iridescent Material</li><li>Ground Integration</li><li>Adjustable Stains</li></ul>
     </article>
 
@@ -332,7 +332,7 @@ document.querySelectorAll('.click-to-play-frame').forEach(function(frame){
           var px=i*GAP+GAP/2,py=j*GAP+GAP/2,dx=px-x,dy=py-y,d=Math.sqrt(dx*dx+dy*dy);
           if(d>RADIUS)continue;
           var t=1-d/RADIUS,e=t*t*(3-2*t),k=d?e*PUSH/d:0;
-          ctx.globalAlpha=e*.5*on;
+          ctx.globalAlpha=e*.375*on;
           ctx.beginPath();
           ctx.arc(px+dx*k,py+dy*k,.6+e*1.5,0,6.2832);
           ctx.fill();
