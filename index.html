@@ -39,13 +39,6 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 .fx-tw1{background-image:radial-gradient(circle,rgba(0,0,0,.225) 1.8px,transparent 2.4px);background-size:263px 263px;background-position:140px 90px;animation:fx-twinkle 7s ease-in-out infinite}
 .fx-tw2{background-image:radial-gradient(circle,rgba(0,0,0,.195) 1.6px,transparent 2.2px);background-size:337px 337px;background-position:40px 210px;animation:fx-twinkle 9s ease-in-out -4s infinite}
 @keyframes fx-twinkle{0%,100%{opacity:0}50%{opacity:1}}
-/* Cursor interaction (desktop only, see script at the end):
-   - .fx-reveal: the blueprint grid lights up in a soft circle around the cursor
-   - .fx-cursor: a fine dot field appears near the cursor and gently parts around it */
-.fx-reveal{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .6s ease;background-image:linear-gradient(rgba(0,0,0,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.11) 1px,transparent 1px);background-size:108px 108px,108px 108px;-webkit-mask-image:radial-gradient(circle 240px at var(--mx,-999px) var(--my,-999px),#000,transparent);mask-image:radial-gradient(circle 240px at var(--mx,-999px) var(--my,-999px),#000,transparent)}
-.fx-reveal.is-active{opacity:1}
-.fx-cursor{position:fixed;inset:0;z-index:0;width:100%;height:100%;pointer-events:none}
-
 /* Soft local paper fields keep copy crisp without creating strips below media. */
 .section-heading,.module-heading,footer{position:relative;background:var(--text-shield);box-shadow:0 0 18px 12px var(--text-shield);text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.88)}
 .hero-copy,.closing{padding:clamp(24px,4.5vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 28px #00000006}.hero-copy{container-type:inline-size}.hero-kicker{font-size:13px;font-weight:600;margin-bottom:22px}.hero-lead{font-size:18px;color:#555550;max-width:720px}.hero-lead strong{font-weight:600;color:#252522}.hero-media{margin-top:18px}
@@ -84,12 +77,13 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 @media(max-width:820px){.edition-grid{grid-template-columns:minmax(0,1fr)}.edition-card{padding:24px}.edition-summary{min-height:0}.edition-section{margin-top:54px}}
 .comparison-showcase{margin-top:18px}.comparison-tabs{display:flex;gap:8px;margin-bottom:10px;padding:6px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.64);box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}.comparison-tab{flex:1;min-height:42px;padding:9px 14px;border:0;border-radius:8px;background:transparent;color:var(--muted);font:650 11px/1.25 var(--font);letter-spacing:.015em;cursor:pointer;transition:background .18s ease,color .18s ease,box-shadow .18s ease}.comparison-tab:hover{color:var(--ink)}.comparison-tab.is-active{background:#171717;color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.12)}.comparison-stage{position:relative}.compare-scene{--position:90%;position:relative;aspect-ratio:2/1;overflow:hidden;border:1px solid rgba(0,0,0,.1);border-radius:var(--radius);background:#171717;box-shadow:0 14px 36px rgba(0,0,0,.1);isolation:isolate}.compare-scene[hidden]{display:none}.compare-scene>img,.compare-after-layer img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}.compare-before-image{position:absolute;inset:0}.compare-after-layer{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--position)) 0 0);will-change:clip-path}.compare-divider{position:absolute;z-index:3;top:0;bottom:0;left:var(--position);width:1px;transform:translateX(-.5px);background:rgba(255,255,255,.58);box-shadow:0 0 0 1px rgba(0,0,0,.08);pointer-events:none}.compare-divider:after{content:"↔";position:absolute;left:50%;top:50%;display:grid;place-items:center;width:32px;height:32px;border:1px solid rgba(255,255,255,.34);border-radius:50%;transform:translate(-50%,-50%);background:rgba(17,17,17,.38);backdrop-filter:blur(5px);color:rgba(255,255,255,.68);font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.12)}.compare-range{position:absolute;z-index:4;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}.compare-label{position:absolute;z-index:5;top:14px;padding:7px 10px;border:1px solid rgba(255,255,255,.18);border-radius:7px;background:rgba(10,10,10,.48);backdrop-filter:blur(8px);color:#fff;font-size:9px;font-weight:750;line-height:1;letter-spacing:.13em;text-transform:uppercase;pointer-events:none}.compare-label-after{left:14px}.compare-label-before{right:14px}.comparison-hint{margin-top:10px;color:var(--muted);font-size:10px;text-align:center}.comparison-tab:focus-visible,.compare-range:focus-visible{outline:2px solid #171717;outline-offset:2px}@media(max-width:520px){.comparison-tabs{display:grid;grid-template-columns:1fr}.comparison-tab{min-height:38px}.compare-label{top:9px;padding:6px 8px}.compare-label-after{left:9px}.compare-label-before{right:9px}.compare-divider:after{width:28px;height:28px;font-size:10px}}
 .launch-sale{background:#ff396a;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 12px 30px rgba(255,57,106,.24)}
+.launch-sale:before{content:"";position:absolute;z-index:0;inset:-18px;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.34) 0 1.2px,transparent 1.5px);background-size:18px 18px;opacity:.42;will-change:background-position;animation:launch-fx-dots 10s linear infinite}
+@keyframes launch-fx-dots{from{background-position:0 0}to{background-position:180px 0}}
+@media(prefers-reduced-motion:reduce){.launch-sale:before{animation:none!important}}
 </style>
 </head>
 <body>
 <div class="fx-bg" aria-hidden="true"><span class="fx-s1"></span><span class="fx-s2"></span><span class="fx-s3"></span><span class="fx-tw fx-tw1"></span><span class="fx-tw fx-tw2"></span></div>
-<div class="fx-reveal" aria-hidden="true"></div>
-<canvas class="fx-cursor" aria-hidden="true"></canvas>
 <main class="page" id="top">
   <header class="hero">
     <div class="hero-copy">
@@ -215,7 +209,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
       <ul class="feature-points"><li>Draw Controller Zones</li><li>Surface Snapping</li><li>Collider Support</li><li>Shape &amp; Tear Controls</li></ul>
     </article>
 
-    <div class="more-card"><h3>And many more.</h3><p>More generators are included for weather, ground interaction, atmospheric motion and scene detail.</p><ul class="effect-list"><li>Tracks &amp; Debris</li><li>Ground Leaves</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Procedural Rain</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Grass Wind</li><li>Moisture Specks</li><li>Dripping</li><li>Dynamic Sparkles</li><li>Spray</li></ul></div>
+    <div class="more-card"><h3>And many more.</h3><p>More generators are included for weather, ground interaction, atmospheric motion and scene detail.</p><ul class="effect-list"><li>Ground Leaves</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Procedural Rain</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Grass Wind</li><li>Moisture Specks</li><li>Dripping</li><li>Dynamic Sparkles</li><li>Spray</li></ul></div>
   </section>
 
   <section class="section" id="shaders">
@@ -343,7 +337,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
             </li>
           </ul>
         </div>
-        <p class="edition-footnote">Designed as the main edition for artists who want the best Lazy Realism FX tools without the extended collection.</p>
+        <p class="edition-footnote">Designed as the main edition for artists who want the best Lazy Realism FX tools without the extended weather collection.</p>
       </article>
 
       <article class="edition-card">
@@ -353,7 +347,7 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
         <p class="edition-summary">The full Lazy Realism FX library with advanced weather, atmospheric motion and additional ground interaction.</p>
         <div class="edition-includes"><strong>Everything in Base, plus</strong>
           <ul class="edition-list">
-            <li>Procedural Rain</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Dynamic Sparkles</li><li>Spray</li><li>Moisture Specks</li><li>Dripping</li><li>Tracks &amp; Debris</li><li>Footprints</li><li>Tire Marks</li>
+            <li>Procedural Rain</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Dynamic Sparkles</li><li>Spray</li><li>Moisture Specks</li><li>Dripping</li><li>Footprints</li><li>Tire Marks</li>
           </ul>
         </div>
       </article>
@@ -438,62 +432,6 @@ document.querySelectorAll('.comparison-showcase').forEach(function(showcase){
   });
 });
 
-/* Cursor-reactive background: grid spotlight + dot field that parts around the cursor.
-   Runs only on devices with a real mouse, and only animates while the cursor moves. */
-(function(){
-  if(!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  var canvas=document.querySelector('.fx-cursor'),reveal=document.querySelector('.fx-reveal');
-  if(!canvas||!reveal||!canvas.getContext)return;
-  var ctx=canvas.getContext('2d');
-  var GAP=22,RADIUS=170,PUSH=14,EASE=.16;
-  var w=0,h=0,tx=-9999,ty=-9999,x=tx,y=ty,on=0,target=0,raf=0;
-
-  function resize(){
-    var dpr=Math.min(window.devicePixelRatio||1,2);
-    w=innerWidth;h=innerHeight;
-    canvas.width=w*dpr;canvas.height=h*dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    kick();
-  }
-  function kick(){if(!raf)raf=requestAnimationFrame(frame);}
-  function frame(){
-    raf=0;
-    x+=(tx-x)*EASE;y+=(ty-y)*EASE;on+=(target-on)*.12;
-    reveal.style.setProperty('--mx',x.toFixed(1)+'px');
-    reveal.style.setProperty('--my',y.toFixed(1)+'px');
-    ctx.clearRect(0,0,w,h);
-    if(on>.01){
-      ctx.fillStyle='#000';
-      var i0=Math.max(0,Math.floor((x-RADIUS)/GAP)),i1=Math.ceil((x+RADIUS)/GAP);
-      var j0=Math.max(0,Math.floor((y-RADIUS)/GAP)),j1=Math.ceil((y+RADIUS)/GAP);
-      for(var i=i0;i<=i1;i++){
-        for(var j=j0;j<=j1;j++){
-          var px=i*GAP+GAP/2,py=j*GAP+GAP/2,dx=px-x,dy=py-y,d=Math.sqrt(dx*dx+dy*dy);
-          if(d>RADIUS)continue;
-          var t=1-d/RADIUS,e=t*t*(3-2*t),k=d?e*PUSH/d:0;
-          ctx.globalAlpha=e*.375*on;
-          ctx.beginPath();
-          ctx.arc(px+dx*k,py+dy*k,.6+e*1.5,0,6.2832);
-          ctx.fill();
-        }
-      }
-      ctx.globalAlpha=1;
-    }
-    if(Math.abs(tx-x)>.2||Math.abs(ty-y)>.2||Math.abs(target-on)>.005)kick();
-  }
-  function leave(){target=0;reveal.classList.remove('is-active');kick();}
-
-  addEventListener('pointermove',function(e){
-    if(on<.02){x=e.clientX;y=e.clientY;}
-    tx=e.clientX;ty=e.clientY;target=1;
-    reveal.classList.add('is-active');
-    kick();
-  },{passive:true});
-  document.documentElement.addEventListener('pointerleave',leave);
-  addEventListener('blur',leave);
-  addEventListener('resize',resize);
-  resize();
-})();
 </script>
 </body>
 </html>
