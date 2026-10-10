@@ -80,6 +80,8 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
 /* Autoplaying scene previews have no mouse or keyboard player interaction. */
 .media-frame iframe.looping-video{pointer-events:none}
 .tree-wind-video{width:100%;max-width:1000px;margin:28px auto 0}.click-to-play-frame{cursor:pointer;background:#141414}.click-to-play-frame iframe{pointer-events:none}.video-start-button{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:pointer}.video-start-button:focus-visible{outline:2px solid #fff;outline-offset:-6px}.video-start-button:after{content:"";position:absolute;left:50%;top:50%;width:54px;height:54px;border-radius:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.58);box-shadow:0 0 0 1px rgba(255,255,255,.48),0 10px 30px rgba(0,0,0,.24);transition:opacity .2s ease,transform .2s ease}.video-start-button:before{content:"";position:absolute;z-index:1;left:calc(50% + 2px);top:50%;transform:translate(-50%,-50%);border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff;transition:opacity .2s ease}.click-to-play-frame:hover .video-start-button:after{transform:translate(-50%,-50%) scale(1.06)}.click-to-play-frame.is-playing .video-start-button{pointer-events:none}.click-to-play-frame.is-playing .video-start-button:before,.click-to-play-frame.is-playing .video-start-button:after{opacity:0}.click-caption{justify-content:center!important;text-align:center}.click-caption strong{font-size:13px!important}
+.edition-section{margin-top:76px}.edition-intro{max-width:760px;margin-bottom:28px;background:var(--text-shield);box-shadow:0 0 18px 12px var(--text-shield)}.edition-intro h2{font-size:clamp(34px,6vw,62px);letter-spacing:-.055em}.edition-intro p{max-width:660px;margin-top:14px;color:var(--muted);font-size:16px}.edition-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}.edition-card{position:relative;display:flex;min-width:0;flex-direction:column;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.78);box-shadow:inset 0 1px 0 rgba(255,255,255,.92),0 12px 34px rgba(0,0,0,.045)}.edition-card.is-featured{border-color:#171717;background:#171717;color:#fff;box-shadow:0 18px 42px rgba(0,0,0,.16)}.edition-badge{align-self:flex-start;margin-bottom:22px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;color:var(--muted);font-size:8px;font-weight:750;line-height:1;letter-spacing:.13em;text-transform:uppercase}.is-featured .edition-badge{border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.64)}.edition-name{font-size:32px;line-height:1;letter-spacing:-.045em}.edition-price{display:flex;align-items:flex-start;margin-top:15px;font-size:44px;font-weight:750;line-height:1;letter-spacing:-.06em}.edition-price sup{margin:4px 0 0 4px;font-size:15px;font-weight:650;letter-spacing:-.02em}.edition-summary{min-height:56px;margin-top:14px;color:var(--muted);font-size:12px;line-height:1.6}.is-featured .edition-summary{color:rgba(255,255,255,.62)}.edition-includes{margin:20px 0 0;padding-top:18px;border-top:1px solid var(--line)}.is-featured .edition-includes{border-color:rgba(255,255,255,.16)}.edition-includes>strong{display:block;margin-bottom:12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.edition-list{display:grid;gap:8px;margin:0;padding:0;list-style:none}.edition-list li{position:relative;padding-left:15px;color:#50504c;font-size:11px;line-height:1.45}.edition-list li:before{content:"";position:absolute;left:0;top:.58em;width:5px;height:5px;border-radius:50%;background:#171717}.edition-list li strong{color:var(--ink);font-weight:650}.is-featured .edition-list li{color:rgba(255,255,255,.68)}.is-featured .edition-list li:before{background:#fff}.is-featured .edition-list li strong{color:#fff}.edition-detail{display:block;margin-top:2px;font-size:9px;line-height:1.45;opacity:.72}.edition-group{margin-top:5px}.edition-sublist{display:grid;gap:0;margin:10px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.14);list-style:none}.edition-sublist li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.11);color:rgba(255,255,255,.7);font-size:10px;line-height:1.25}.edition-sublist li:before{display:none}.edition-footnote{margin-top:auto;padding-top:20px;color:var(--muted);font-size:9px;line-height:1.5}.is-featured .edition-footnote{color:rgba(255,255,255,.48)}
+@media(max-width:820px){.edition-grid{grid-template-columns:minmax(0,1fr)}.edition-card{padding:24px}.edition-summary{min-height:0}.edition-section{margin-top:54px}}
 </style>
 </head>
 <body>
@@ -269,7 +271,71 @@ body:after{inset:-80px;opacity:.7;background-image:radial-gradient(circle at 11%
     </div>
   </section>
 
-  <section class="closing" id="showcase"><h2>See the difference.</h2><p>Choose the effect, adjust it to the scene and create a render with more atmosphere, motion and detail.</p><div class="workflow-steps"><div class="workflow-step"><h3>Choose.</h3><p>Pick the effect your scene needs.</p></div><div class="workflow-step"><h3>Adjust.</h3><p>Tune the look to fit your environment.</p></div><div class="workflow-step"><h3>Create.</h3><p>Bring the details together in the final render.</p></div></div></section>
+  <section class="edition-section" id="editions" aria-labelledby="editionTitle">
+    <div class="edition-intro">
+      <h2 id="editionTitle">Choose your edition.</h2>
+      <p>Start with essential scene-detail tools, unlock the complete realism toolkit or add the full collection of weather and atmospheric effects.</p>
+    </div>
+    <div class="edition-grid">
+      <article class="edition-card">
+        <span class="edition-badge">Essential effects</span>
+        <h3 class="edition-name">Light</h3>
+        <div class="edition-price">$24<sup>.99</sup></div>
+        <p class="edition-summary">A focused starting collection for atmosphere, insects, surface detail and fast one-click shaders.</p>
+        <div class="edition-includes"><strong>Included in Light</strong>
+          <ul class="edition-list">
+            <li>Flying Dust</li><li>Ashes</li><li>Dust on Object</li>
+            <li><strong>Birds · Pigeons only</strong></li>
+            <li><strong>Insect Swarm</strong><span class="edition-detail">Bees, Fireflies, Butterflies, Moths, Mosquitoes and Houseflies</span></li>
+            <li><strong>Crawling Insects</strong><span class="edition-detail">Spiders, Cockroaches, Ants and Snails</span></li>
+            <li>Simple Rust</li><li>Simple Fingerprints</li><li>Simple Scratches</li><li>Dirt Particles</li><li>Simple Dust Shader</li><li>Ground Dirt</li><li>Quick Puddles</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="edition-card is-featured">
+        <span class="edition-badge">Recommended · Best value</span>
+        <h3 class="edition-name">Base</h3>
+        <div class="edition-price">$49<sup>.99</sup></div>
+        <p class="edition-summary">The complete core experience, including the strongest physics, scattering, vegetation and surface systems.</p>
+        <div class="edition-includes"><strong>Everything in Light, plus</strong>
+          <ul class="edition-list">
+            <li><strong>Physical Leaves + Ground Leaves</strong><span class="edition-detail">110 leaf assets included</span></li>
+            <li><strong>All four bird types</strong><span class="edition-detail">Seagulls, Pigeons, Crows and Bats</span></li>
+            <li>Flying Airplanes</li><li>Vegetation Wind</li><li>Moss Scatter</li><li>3D Puddles</li><li>Simulated Droplets</li><li>Spiderwebs</li>
+            <li class="edition-group"><strong>Pro Shaders</strong>
+              <ul class="edition-sublist">
+                <li>Snow Shader</li>
+                <li>Moss</li>
+                <li>Pro Moss</li>
+                <li>Moss Leaks</li>
+                <li>Leaks</li>
+                <li>Edge Wear</li>
+                <li>Pro Dust</li>
+                <li>Pro Dirt</li>
+                <li>Oil Stains</li>
+                <li>Pro Rust</li>
+                <li>Dirt in Edges</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <p class="edition-footnote">Designed as the main edition for artists who want the best Lazy Realism FX tools without the extended weather collection.</p>
+      </article>
+
+      <article class="edition-card">
+        <span class="edition-badge">Complete collection</span>
+        <h3 class="edition-name">Pro</h3>
+        <div class="edition-price">$64<sup>.99</sup></div>
+        <p class="edition-summary">The full Lazy Realism FX library with advanced weather, atmospheric motion and additional ground interaction.</p>
+        <div class="edition-includes"><strong>Everything in Base, plus</strong>
+          <ul class="edition-list">
+            <li>Procedural Rain</li><li>Quick Snow</li><li>Quick Thin Snow</li><li>Snowfall</li><li>Lazy Atmosphere</li><li>Dynamic Sparkles</li><li>Spray</li><li>Moisture Specks</li><li>Dripping</li><li>Tracks &amp; Debris</li><li>Footprints</li><li>Tire Marks</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
   <section class="documentation-strip" id="documentation">
     <div class="documentation-copy"><h2>Documentation.</h2><p>Includes complete PDF documentation with setup instructions, controls and detailed workflows.</p></div>
     <div class="doc-actions">
